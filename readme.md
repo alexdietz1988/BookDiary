@@ -35,3 +35,7 @@ Books - Goodreads/LibraryThing - books, reviews/rating, authors
 
 ## ERD 
 ![image](https://user-images.githubusercontent.com/101350351/165376272-0debcf9e-c306-49d6-8c38-3022cb9a2e28.png)
+
+## Wireframe
+
+https://www.figma.com/file/E1IOOzZNBfc6Gde9sI9pT2/Untitled?node-id=0%3A1
