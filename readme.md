@@ -15,7 +15,8 @@ Books - Goodreads/LibraryThing - books, reviews/rating, authors
 - as a User, I should be able to edit/update a book status - currently reading, read, want-to-read;
 - as a User, I should be able to add notes to a book in my library;
 - as a User, I should be able to have a Home button with my Library;
-- as a User, I should be able to have a Home page with the bookshelves of "currently reading", "read", "want-to-read"
+- as a User, I should be able to have a Home page with the bookshelves of "currently reading", "read", "want-to-read"; 
+- as a User, I should be able to have a page with a full updated information on a book
 
 
 ## MVP
@@ -23,7 +24,11 @@ Books - Goodreads/LibraryThing - books, reviews/rating, authors
  - login page;
  - new book;
  - edit a book;
+ - show page for a book;
  - home page that links to "currently reading", "read", "want-to-read", "new book";
+ - styling 
 
-## Stretch Goal
- - home page that includes "currently reading", "read", "want-to-read", "new book";
+## Stretch Goals
+ - home page that includes list of "currently reading", "read", "want-to-read", "new book";
+ - make a book public and allow any user to be able to add a review on it;
+ - add notes/reviews model. 
