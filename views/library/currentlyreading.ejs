@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currently Reading</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/<%= username %>/home">Home</a></li>
+            <li><a href="/<%= username %>/currentlyreading">Currently Reading</a></li>
+            <li><a href="/<%= username %>/finishedreading">Finished Reading</a></li>
+            <li><a href="/<%= username %>/wanttoread">Want to Read</a></li>
+        </ul>
+    </nav>
+
+    <h1>Currently Reading</h1>
+
+    <h2>List view</h2>
+    <% for (let i = 0; i < books.length; i++) { %>
+        <p><a href="/<%= username %>/<%= books[i]._id %>"><%= `${books[i].author}, ${books[i].title}` %></a></p>
+    <% } %> 
+
+    <h2>Cover view</h2>
+    <% for (let i = 0; i < books.length; i++) { %>
+        <div class="coverContainer">
+            <a href="/<%= username %>/<%= books[i]._id %>"><img src=<%= books[i].cover %> alt="<%= books[i].title %> "></a>
+        </div>
+    <% } %> 
+    
+</body>
+</html>
