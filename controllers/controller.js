@@ -30,7 +30,7 @@ router.get('/:username/currentlyreading', async (req, res, next) => {
         const books = await db.Book.find({user: req.params.username, readingStatus: 'Currently Reading'})
         const context = { books: books }
         return res.render('library/currentlyreading', context)
-        
+
     } catch (error) {
         console.log(error)
         req.error = error
@@ -44,7 +44,7 @@ router.get('/:username/wanttoread', async (req, res, next) => {
         const books = await db.Book.find({user: req.params.username, readingStatus: 'Want To Read'})
         const context = { books: books }
         return res.render('library/wanttoread', context)
-        
+
     } catch (error) {
         console.log(error)
         req.error = error
@@ -58,7 +58,7 @@ router.get('/:username/finishedreading', async (req, res, next) => {
         const books = await db.Book.find({user: req.params.username, readingStatus: 'Finished Reading'})
         const context = { books: books }
         return res.render('library/finishedreading', context)
-        
+
     } catch (error) {
         console.log(error)
         req.error = error
@@ -73,6 +73,7 @@ router.get('/:username/new', (req, res) => {
 })
 
 router.post('/:username/new', async (req, res, next) => {
+    // res.send("Hitting post route")
     try {
         await db.Book.create(req.body)
         return res.redirect(`/${req.params.username}/home`)
