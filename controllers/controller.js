@@ -29,10 +29,10 @@ router.get('/:username/home', (req, res,) => {
 router.get('/:username/currentlyreading', async (req, res, next) => {
     try {
         const username = req.params.username
-        const user = await db.User({username: username})
+        const user = await db.User({ username: username })
         const context = { currentlyReading: user.currentlyReading }
         return res.render('library/currentlyreading', context)
-        
+
     } catch (error) {
         console.log(error)
         req.error = error
@@ -45,10 +45,10 @@ router.get('/:username/wanttoread', async (req, res, next) => {
     res.send('hitting wanttoread')
     try {
         const username = req.params.username
-        const user = await db.User({username: username})
+        const user = await db.User({ username: username })
         const context = { wantToRead: user.wantToRead }
         return res.render('library/wanttoread', context)
-        
+
     } catch (error) {
         console.log(error)
         req.error = error
@@ -60,10 +60,10 @@ router.get('/:username/wanttoread', async (req, res, next) => {
 router.get('/:username/finishedreading', async (req, res, next) => {
     try {
         const username = req.params.username
-        const user = await db.User({username: username})
+        const user = await db.User({ username: username })
         const context = { finishedReading: user.finishedReading }
         return res.render('library/finishedreading', context)
-        
+
     } catch (error) {
         console.log(error)
         req.error = error
@@ -79,6 +79,7 @@ router.get('/:username/new', (req, res) => {
 })
 
 router.post('/:username/new', async (req, res, next) => {
+    // res.send("Hitting post route")
     try {
         await db.Book.create(req.body)
         return res.redirect(`/${req.params.username}/home`)
@@ -93,7 +94,7 @@ router.post('/:username/new', async (req, res, next) => {
 router.get('/:bookId/edit', async (req, res, next) => {
     try {
         const bookId = req.params.bookId
-        const book = await db.Book({bookId: bookId})
+        const book = await db.Book({ bookId: bookId })
         const context = { book: book }
         return res.render('edit.ejs', context)
     } catch (error) {

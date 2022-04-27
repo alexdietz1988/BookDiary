@@ -9,19 +9,19 @@ const bookSchema = new mongoose.Schema({
         type: String,
         required: [true, "Every book must have an author"]
     },
-    yearPublished: {
+    year: {
         type: Number
     },
     genre: {
         type: String
     },
+    cover: {
+        type: String
+    },
     pages: {
         type: Number
     },
-    audioBook: {
-        type: Boolean,
-        hours: Number
-    },
+    audioBook: Number,
     readingStatus: {
         type: String
     },
