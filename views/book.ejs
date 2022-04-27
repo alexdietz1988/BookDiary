@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= book.title %></title>
+    <title>
+        <%= book.title %>
+    </title>
 </head>
+
 <body>
 
-    <h1><%= book.title %></h1>
+    <h1>
+        <%= book.title %>
+    </h1>
 
     <div class="bookDisplay">
-        <img src=<%= book.cover %> alt="<%= book.title %>">
-        <p>Reading Status: <%= book.readingstatus %></p>
+        <img src=<%=book.cover %> alt="<%= book.title %>">
+            <p>Reading Status: <%= book.readingStatus %>
+            </p>
     </div>
 
     <div class="bookInfo">
-        <p>Author: <%= book.author %></p>
-        <p>Year Published: <%= book.yearpublished %></p>
-        <p>Genre: <%= book.genre %></p>
-        <p>Pages: <%= book.pages %></p>
-        <p>Audiobook Length: <%= book.audiobook %></p>
+        <p>Author: <%= book.author %>
+        </p>
+        <p>Year Published: <%= book.year %>
+        </p>
+        <p>Genre: <%= book.genre %>
+        </p>
+        <p>Pages: <%= book.pages %>
+        </p>
+        <p>Audiobook Length: <%= book.audioBook %>
+        </p>
     </div>
 
     <div class="bookNotes">
-        <p>>Notes: <%= book.notes %></p>
+        <p>Notes: <%= book.notes %>
+        </p>
     </div>
 
     <div class="showPageButtons">
@@ -38,4 +51,5 @@
     </div>
 
 </body>
+
 </html>

@@ -11,6 +11,10 @@
 <body>
     <h1>New Book</h1>
     <form method="POST" action="/<%=username%>/new">
+
+        <div>
+            <input name="username" type="hidden" value="<%=username%>">
+        </div>
         <div>
             <label for="title"> Book Title: </label>
             <input id="title" name="title" type="text">

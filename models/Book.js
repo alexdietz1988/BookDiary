@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const bookSchema = new mongoose.Schema({
+    username: String,
     title: {
         type: String,
         required: [true, "Every book must have a title"]
