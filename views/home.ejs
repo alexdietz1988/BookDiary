@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+        <%- include('partials/head.ejs',{ pageName : "Home" }) %>
+    <body>
+        <%- include('partials/header.ejs') %>
+        <%- include('partials/nav.ejs') %>
+        <main>
+            <section>
+                <h3>Currently Reading</h3>
+                <% for(let idx=0; idx < books.length; idx++){ %>
+                    <% const book=books[idx] %>
+                        <div class="currentRead">
+                            <img class="card-image" src="<%=book.cover%>">
+                            <span><%=book.name%></span>
+                        </div>
+
+                <% } %>
+            </section>
+            <section>
+                <h3>Future Reads</h3>
+                <% for(let idx=0; idx < books.length; idx++){ %>
+                    <% const book=books[idx] %>
+                        <div class="currentRead">
+                            <img class="card-image" src="<%=book.cover%>">
+                            <span><%=book.name%></span>
+                        </div>
+
+                <% } %>
+            </section>
+            <section>
+                <h3>Completed</h3>
+                <% for(let idx=0; idx < books.length; idx++){ %>
+                    <% const book=books[idx].readingStatus['read'] %>
+                        <div class="currentRead">
+                            <img class="card-image" src="<%=book.cover%>">
+                            <span><%=book.name%></span>
+                        </div>
+
+                <% } %>
+            </section>
+ 
+        </main>
+    </body>
+</html>

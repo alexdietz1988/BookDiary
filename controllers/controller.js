@@ -5,8 +5,8 @@ const db = require('../models')
 
 // Landing page
 router.get('/', (req, res) => {
-    res.send('Welcome to Book Diary')
-    // res.render('landing.ejs')
+    //res.send('Welcome to Book Diary')
+    res.render('landing.ejs')
 })
 
 // Register
@@ -20,8 +20,10 @@ router.get('/login', (req, res) => {
 })
 
 // Home - Links to user's bookshelves
-router.get('/:username/home', (req, res,) => {
-    const context = req.params.username
+router.get('/home', (req, res,) => {
+    const context = { 
+     books: req.params.username
+    }
     res.render('home.ejs', context)
 })
 
