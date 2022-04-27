@@ -23,6 +23,7 @@ const bookSchema = new mongoose.Schema({
         type: Number
     },
     audioBook: Number,
+
     readingStatus: {
         type: String
     },

@@ -27,8 +27,8 @@ router.get('/:username/home', (req, res,) => {
 // Currently Reading
 router.get('/:username/currentlyreading', async (req, res, next) => {
     try {
-        const books = await db.Book.find({ user: req.params.username, readingStatus: 'Currently Reading' })
-        const context = { books: books }
+        const books = await db.Book.find({ username: req.params.username, readingStatus: 'reading' })
+        const context = { books: books, username: req.params.username }
         return res.render('library/currentlyreading', context)
 
     } catch (error) {
@@ -41,8 +41,8 @@ router.get('/:username/currentlyreading', async (req, res, next) => {
 // Want to Read
 router.get('/:username/wanttoread', async (req, res, next) => {
     try {
-        const books = await db.Book.find({ user: req.params.username, readingStatus: 'Want To Read' })
-        const context = { books: books }
+        const books = await db.Book.find({ username: req.params.username, readingStatus: 'wanttoread' })
+        const context = { books: books, username: req.params.username }
         return res.render('library/wanttoread', context)
 
     } catch (error) {
@@ -55,8 +55,8 @@ router.get('/:username/wanttoread', async (req, res, next) => {
 // Finished Reading
 router.get('/:username/finishedreading', async (req, res, next) => {
     try {
-        const books = await db.Book.find({ user: req.params.username, readingStatus: 'Finished Reading' })
-        const context = { books: books }
+        const books = await db.Book.find({ username: req.params.username, readingStatus: 'read' })
+        const context = { books: books, username: req.params.username }
         return res.render('library/finishedreading', context)
 
     } catch (error) {
