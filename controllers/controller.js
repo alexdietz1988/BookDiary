@@ -1,4 +1,3 @@
-const { escapeRegExpChars } = require('ejs/lib/utils')
 const express = require('express')
 const router = express.Router()
 const db = require('../models')
@@ -28,9 +27,8 @@ router.get('/:username/home', (req, res,) => {
 // Currently Reading
 router.get('/:username/currentlyreading', async (req, res, next) => {
     try {
-        const username = req.params.username
-        const user = await db.User({ username: username })
-        const context = { currentlyReading: user.currentlyReading }
+        const books = await db.Book.find({user: req.params.username, readingStatus: 'Currently Reading'})
+        const context = { books: books }
         return res.render('library/currentlyreading', context)
 
     } catch (error) {
@@ -42,11 +40,9 @@ router.get('/:username/currentlyreading', async (req, res, next) => {
 
 // Want to Read
 router.get('/:username/wanttoread', async (req, res, next) => {
-    res.send('hitting wanttoread')
     try {
-        const username = req.params.username
-        const user = await db.User({ username: username })
-        const context = { wantToRead: user.wantToRead }
+        const books = await db.Book.find({user: req.params.username, readingStatus: 'Want To Read'})
+        const context = { books: books }
         return res.render('library/wanttoread', context)
 
     } catch (error) {
@@ -59,9 +55,8 @@ router.get('/:username/wanttoread', async (req, res, next) => {
 // Finished Reading
 router.get('/:username/finishedreading', async (req, res, next) => {
     try {
-        const username = req.params.username
-        const user = await db.User({ username: username })
-        const context = { finishedReading: user.finishedReading }
+        const books = await db.Book.find({user: req.params.username, readingStatus: 'Finished Reading'})
+        const context = { books: books }
         return res.render('library/finishedreading', context)
 
     } catch (error) {
@@ -73,8 +68,7 @@ router.get('/:username/finishedreading', async (req, res, next) => {
 
 // Add a new book
 router.get('/:username/new', (req, res) => {
-    const username = req.params.username
-    const context = { username: username }
+    const context = { username: req.params.username }
     res.render('new.ejs', context)
 })
 
@@ -94,7 +88,7 @@ router.post('/:username/new', async (req, res, next) => {
 router.get('/:bookId/edit', async (req, res, next) => {
     try {
         const bookId = req.params.bookId
-        const book = await db.Book({ bookId: bookId })
+        const book = await db.Book.findById(bookId)
         const context = { book: book }
         return res.render('edit.ejs', context)
     } catch (error) {
@@ -107,7 +101,7 @@ router.get('/:bookId/edit', async (req, res, next) => {
 router.put('/:bookId', async (req, res, next) => {
     try {
         const bookId = req.params.bookId
-        await db.Book.findbyIdAndUpdate(bookId, req.body)
+        await db.Book.findByIdAndUpdate(bookId, req.body)
         return res.redirect('/:bookId')
     } catch (error) {
         console.log(error)
@@ -119,7 +113,7 @@ router.put('/:bookId', async (req, res, next) => {
 // Show page
 router.get('/:username/:bookId', async (req, res, next) => {
     try {
-        const book = await db.Book.findbyId(req.params.bookId)
+        const book = await db.Book.findById(req.params.bookId)
         const context = { book: book }
         return res.render('book.ejs', context)
     } catch (error) {
