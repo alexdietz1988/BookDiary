@@ -5,7 +5,8 @@ const db = require('../models')
 
 // Landing page
 router.get('/', (req, res) => {
-    res.render('landing.ejs')
+    res.send('Welcome to Book Diary')
+    // res.render('landing.ejs')
 })
 
 // Register
