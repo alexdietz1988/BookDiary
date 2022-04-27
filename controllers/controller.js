@@ -20,7 +20,7 @@ router.get('/login', (req, res) => {
 
 // Home - Links to user's bookshelves
 router.get('/:username/home', (req, res,) => {
-    const context = req.params.username
+    const context = { username: req.params.username }
     res.render('home.ejs', context)
 })
 
