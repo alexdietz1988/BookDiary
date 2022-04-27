@@ -29,9 +29,10 @@ Books - Goodreads/LibraryThing - books, reviews/rating, authors
  - styling 
 
 ## Stretch Goals
+ - auth
  - home page that includes list of "currently reading", "read", "want-to-read", "new book";
  - make a book public and allow any user to be able to add a review on it;
- - add notes/reviews model. 
+ - recommendations by genre
 
 ## ERD 
 ![image](https://user-images.githubusercontent.com/101350351/165376272-0debcf9e-c306-49d6-8c38-3022cb9a2e28.png)
