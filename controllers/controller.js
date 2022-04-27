@@ -20,18 +20,15 @@ router.get('/login', (req, res) => {
 
 // Home - Links to user's bookshelves
 router.get('/:username/home', (req, res,) => {
-    const context = {
-        username: req.params.username
-    }
+    const context = { username: req.params.username }
     res.render('home.ejs', context)
 })
 
 // Currently Reading
 router.get('/:username/currentlyreading', async (req, res, next) => {
     try {
-        const username = req.params.username
-        const user = await db.User({username: username})
-        const context = { currentlyReading: user.currentlyReading }
+        const books = await db.Book.find({ username: req.params.username, readingStatus: 'reading' })
+        const context = { books: books, username: req.params.username }
         return res.render('library/currentlyreading', context)
         
     } catch (error) {
@@ -45,9 +42,8 @@ router.get('/:username/currentlyreading', async (req, res, next) => {
 router.get('/:username/wanttoread', async (req, res, next) => {
     res.send('hitting wanttoread')
     try {
-        const username = req.params.username
-        const user = await db.User({username: username})
-        const context = { wantToRead: user.wantToRead }
+        const books = await db.Book.find({ username: req.params.username, readingStatus: 'wanttoread' })
+        const context = { books: books, username: req.params.username }
         return res.render('library/wanttoread', context)
         
     } catch (error) {
@@ -60,9 +56,8 @@ router.get('/:username/wanttoread', async (req, res, next) => {
 // Finished Reading
 router.get('/:username/finishedreading', async (req, res, next) => {
     try {
-        const username = req.params.username
-        const user = await db.User({username: username})
-        const context = { finishedReading: user.finishedReading }
+        const books = await db.Book.find({ username: req.params.username, readingStatus: 'read' })
+        const context = { books: books, username: req.params.username }
         return res.render('library/finishedreading', context)
         
     } catch (error) {
