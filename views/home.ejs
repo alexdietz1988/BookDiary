@@ -6,37 +6,13 @@
         <%- include('partials/nav.ejs') %>
         <main>
             <section>
-                <h3>Currently Reading</h3>
-                <% for(let idx=0; idx < books.length; idx++){ %>
-                    <% const book=books[idx] %>
-                        <div class="currentRead">
-                            <img class="card-image" src="<%=book.cover%>">
-                            <span><%=book.name%></span>
-                        </div>
-
-                <% } %>
+                <h3><a href='/<%=username%>/currentlyreading'>Current Reads</a></h3>
             </section>
             <section>
-                <h3>Future Reads</h3>
-                <% for(let idx=0; idx < books.length; idx++){ %>
-                    <% const book=books[idx] %>
-                        <div class="currentRead">
-                            <img class="card-image" src="<%=book.cover%>">
-                            <span><%=book.name%></span>
-                        </div>
-
-                <% } %>
+                <h3><a href='/<%=username%>/wanttoread'>Future Reads</a></h3>
             </section>
             <section>
-                <h3>Completed</h3>
-                <% for(let idx=0; idx < books.length; idx++){ %>
-                    <% const book=books[idx].readingStatus['read'] %>
-                        <div class="currentRead">
-                            <img class="card-image" src="<%=book.cover%>">
-                            <span><%=book.name%></span>
-                        </div>
-
-                <% } %>
+                <h3><a href='/<%=username%>/finishedreading'>Completed</a></h3>
             </section>
  
         </main>
