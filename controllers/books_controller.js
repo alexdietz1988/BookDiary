@@ -5,7 +5,7 @@ const db = require('../models')
 
 // Landing page
 router.get('/', (req, res) => {
-    res.render('landing.ejs')
+    res.render('auth/login.ejs')
 })
 
 // Register
