@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const PORT = 4000
-const controllers = require('./controllers/controller.js')
+const controllers = require('./controllers')
 const methodOverride = require('method-override')
 require('./config/db.connection')
 app.set('view engine', 'ejs')
@@ -23,7 +23,7 @@ app.use(
     })
 )
 
-app.use('/', controllers)
-app.use('/home', controllers)
+app.use('/auth', controllers.auth)
+app.use('/', controllers.books)
 
 app.listen(PORT, () => console.log('Server is running on port ' + PORT))

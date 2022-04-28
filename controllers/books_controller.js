@@ -1,24 +1,6 @@
-const { escapeRegExpChars } = require('ejs/lib/utils')
 const express = require('express')
 const router = express.Router()
 const db = require('../models')
-// const methodOverride = require('method-override')
-// app.use(methodOverride('_method'))
-
-// Landing page
-router.get('/', (req, res) => {
-    res.render('landing.ejs')
-})
-
-// Register
-router.get('/register', (req, res) => {
-    res.render('auth/register.ejs')
-})
-
-// Login
-router.get('/login', (req, res) => {
-    res.render('auth/login.ejs')
-})
 
 // Home - Links to user's bookshelves
 router.get('/:username/home', (req, res,) => {
