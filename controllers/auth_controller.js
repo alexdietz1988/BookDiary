@@ -37,4 +37,25 @@ router.get('/login', (req, res) => {
     res.render('auth/login.ejs')
 })
 
+router.post('/login', async (req, res) => {
+    try {
+        const foundUser = await User.findOne({ email: req.body.email })
+        if (!foundUser) return res.redirect('/register')
+
+        const match = await bcrypt.compare(req.body.password, foundUser.password)
+        
+        if (!match) return res.send('invalid username or password')
+
+        req.session.currentUser = {
+            id: foundUser._id,
+            username: foundUser.username
+        }
+        return res.redirect(`/${username}/home`)
+    } catch (error) {
+        console.log(error)
+        req.error = error
+        return res.send(error)
+    }
+})
+
 module.exports = router
