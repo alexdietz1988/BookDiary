@@ -8,6 +8,20 @@
     <title>
         <%= book.title %>
     </title>
+    <nav>
+        <section>
+            <h3><a href='/<%=username%>/new'> Add a new book</a></h3>
+        </section>
+        <section>
+            <h3><a href='/<%=username%>/currentlyreading'>Current Reads</a></h3>
+        </section>
+        <section>
+            <h3><a href='/<%=username%>/wanttoread'>Future Reads</a></h3>
+        </section>
+        <section>
+            <h3><a href='/<%=username%>/finishedreading'>Completed</a></h3>
+        </section>
+    </nav>
 </head>
 
 <body>
@@ -18,17 +32,17 @@
 
     <div class="bookDisplay">
         <img src=<%=book.cover %> alt="<%= book.title %>">
-            <p>Reading Status: 
-                
-                <% if (book.readingStatus === "reading") { %> 
+            <p>Reading Status:
+
+                <% if (book.readingStatus==="reading" ) { %>
                     I'm reading this book
-                <% } %>
-                <% if (book.readingStatus === "read") { %> 
-                    I've read this book
-                <% } %>
-                <% if (book.readingStatus === "wanttoread") { %>
-                    I want to read this book
-                <% } %>
+                    <% } %>
+                        <% if (book.readingStatus==="read" ) { %>
+                            I've read this book
+                            <% } %>
+                                <% if (book.readingStatus==="wanttoread" ) { %>
+                                    I want to read this book
+                                    <% } %>
             </p>
     </div>
 

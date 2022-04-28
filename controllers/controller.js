@@ -2,8 +2,6 @@ const { escapeRegExpChars } = require('ejs/lib/utils')
 const express = require('express')
 const router = express.Router()
 const db = require('../models')
-// const methodOverride = require('method-override')
-// app.use(methodOverride('_method'))
 
 // Landing page
 router.get('/', (req, res) => {
