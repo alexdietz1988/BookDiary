@@ -18,6 +18,19 @@ router.get('/login', (req, res) => {
     res.render('auth/login.ejs')
 })
 
+// Add a new user
+router.post('/newuser', async (req, res, next) => {
+    try {
+        await db.User.create(req.body)
+        const username = req.body.username
+        return res.redirect(`/${username}/home`)
+    } catch (error) {
+        console.log(error)
+        req.error = error
+        return next()
+    }
+})
+
 // Home - Links to user's bookshelves
 router.get('/:username/home', (req, res,) => {
     const context = { username: req.params.username }
@@ -102,7 +115,7 @@ router.get('/:bookId/edit', async (req, res, next) => {
 router.put('/:bookId', async (req, res, next) => {
     try {
         const bookId = req.params.bookId
-        await db.Book.findbyIdAndUpdate(bookId, req.body)
+        await db.Book.findByIdAndUpdate(bookId, req.body)
         return res.redirect('/:bookId')
     } catch (error) {
         console.log(error)
@@ -114,7 +127,7 @@ router.put('/:bookId', async (req, res, next) => {
 // Show page
 router.get('/:username/:bookId', async (req, res, next) => {
     try {
-        const book = await db.Book.findbyId(req.params.bookId)
+        const book = await db.Book.findById(req.params.bookId)
         const context = { book: book }
         return res.render('book.ejs', context)
     } catch (error) {
