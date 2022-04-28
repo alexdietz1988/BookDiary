@@ -90,7 +90,7 @@ router.post('/:username/new', async (req, res, next) => {
 router.get('/:username/:bookId/edit', async (req, res, next) => {
     try {
         const bookId = req.params.bookId
-        const book = await db.Book({ bookId: bookId })
+        const book = await db.Book.findById(bookId)
         const context = { book: book, bookId: bookId, username: req.params.username }
         return res.render('edit.ejs', context)
     } catch (error) {
