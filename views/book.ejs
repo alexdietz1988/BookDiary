@@ -41,11 +41,11 @@
     </div>
 
     <div class="showPageButtons">
-        <form action="/<%= book._id %>/edit">
+        <form action="/<%=username%>/<%= book._id %>/edit">
             <input type="submit" value="Edit Book">
         </form>
 
-        <form action="/<%= book._id %>/delete">
+        <form action="/<%=username%>/<%= book._id %>?_method=DELETE" method="POST">
             <input type="submit" value="Remove Book">
         </form>
     </div>

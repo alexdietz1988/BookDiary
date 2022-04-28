@@ -10,7 +10,7 @@
 
 <body>
     <h1>Edit Book</h1>
-    <form method="POST" action="/<%= bookId%>?_method=PUT">
+    <form method="POST" action="/<%=username%>/<%= bookId%>?_method=PUT">
         <div>
             <input name="username" type="hidden" value="<%=username%>">
         </div>
