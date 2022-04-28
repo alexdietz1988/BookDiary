@@ -18,7 +18,17 @@
 
     <div class="bookDisplay">
         <img src=<%=book.cover %> alt="<%= book.title %>">
-            <p>Reading Status: <%= book.readingStatus %>
+            <p>Reading Status: 
+                
+                <% if (book.readingStatus === "reading") { %> 
+                    I'm reading this book
+                <% } %>
+                <% else if (book.readingStatus === "read") { %> 
+                    I've read this book
+                <% } %>
+                <% else if (book.readingStatus === "wanttoread") { %>
+                    I want to read this book
+                <% } %>
             </p>
     </div>
 
