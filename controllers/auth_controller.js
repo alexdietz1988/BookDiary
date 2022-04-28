@@ -16,7 +16,7 @@ router.get('/register', (req, res) => {
 router.post('/register', async (req, res) => {
     try {
         const foundUser = await User.exists({ email: req.body.email })
-        if (foundUser) return res.redirect('/login')
+        if (foundUser) return res.redirect('/auth/login')
 
         const salt = await bcrypt.genSalt(12)
         const hash = await bcrypt.hash(req.body.password, salt)
@@ -24,7 +24,7 @@ router.post('/register', async (req, res) => {
 
         await User.create(req.body)
 
-        return res.redirect('/login')
+        return res.redirect('/auth/login')
     } catch (error) {
         console.log(error)
         req.error = error
@@ -39,16 +39,16 @@ router.get('/login', (req, res) => {
 
 router.post('/login', async (req, res) => {
     try {
-        const foundUser = await User.findOne({ email: req.body.email })
-        if (!foundUser) return res.redirect('/register')
-
+        const foundUser = await User.findOne({ username: req.body.username })
+        if (!foundUser) return res.redirect('/auth/register')
         const match = await bcrypt.compare(req.body.password, foundUser.password)
         
         if (!match) return res.send('invalid username or password')
 
+        const username = foundUser.username
         req.session.currentUser = {
             id: foundUser._id,
-            username: foundUser.username
+            username: username
         }
         return res.redirect(`/${username}/home`)
     } catch (error) {
