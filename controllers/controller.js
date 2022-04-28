@@ -5,9 +5,9 @@ const db = require('../models')
 // const methodOverride = require('method-override')
 // app.use(methodOverride('_method'))
 
-// Landing page
+// Landing/login page
 router.get('/', (req, res) => {
-    res.render('landing.ejs')
+    res.render('auth/login.ejs')
 })
 
 // Register
