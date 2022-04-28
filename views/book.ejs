@@ -23,10 +23,10 @@
                 <% if (book.readingStatus === "reading") { %> 
                     I'm reading this book
                 <% } %>
-                <% else if (book.readingStatus === "read") { %> 
+                <% if (book.readingStatus === "read") { %> 
                     I've read this book
                 <% } %>
-                <% else if (book.readingStatus === "wanttoread") { %>
+                <% if (book.readingStatus === "wanttoread") { %>
                     I want to read this book
                 <% } %>
             </p>

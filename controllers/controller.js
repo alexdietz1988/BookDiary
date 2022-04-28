@@ -100,11 +100,11 @@ router.get('/:username/:bookId/edit', async (req, res, next) => {
     }
 })
 
-router.put('/:bookId', async (req, res, next) => {
+router.put('/:username/:bookId', async (req, res, next) => {
     try {
         const bookId = req.params.bookId
-        await db.Book.findbyIdAndUpdate(bookId, req.body)
-        return res.redirect('/:bookId')
+        await db.Book.findByIdAndUpdate(bookId, req.body)
+        return res.redirect(`/${req.params.username}/${bookId}`)
     } catch (error) {
         console.log(error)
         req.error = error
