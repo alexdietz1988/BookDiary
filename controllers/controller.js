@@ -53,7 +53,6 @@ router.get('/:username/currentlyreading', async (req, res, next) => {
 
 // Want to Read
 router.get('/:username/wanttoread', async (req, res, next) => {
-    res.send('hitting wanttoread')
     try {
         const books = await db.Book.find({ username: req.params.username, readingStatus: 'wanttoread' })
         const context = { books: books, username: req.params.username }
