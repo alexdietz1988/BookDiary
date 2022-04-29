@@ -2,6 +2,12 @@ body {
     background-color: #fefae0;
     width: 1000px;
     margin: 0 auto;
+    max-width: 75vw;
+}
+
+h1 {
+    text-align: center;
+    margin: 15px 0 30px;
 }
 
 a:link {
@@ -72,20 +78,29 @@ header {
 }
 
 .show-page-buttons {
-    margin: 15px;
+    margin: 10px;
     padding: 10px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
 }
 
-/* .edit-page {
+.edit-button,
+.remove-button {
+    margin: 10px;
+}
+
+.edit {
+    padding: 2px 20px;
+}
+
+.edit-new-page {
     font-family: arial;
     display: grid;
     grid-template-columns: 500px;
     grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
     justify-content: center;
     margin-bottom: 40px;
-} */
+}
 
 .edit-title {
     margin-top: 15px;

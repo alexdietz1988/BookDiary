@@ -4,55 +4,101 @@
     <%- include('partials/nav.ejs') %>
 
         <body>
-            <h1>New Book</h1>
-            <form method="POST" action="/<%=username%>/new">
+            <h1 class="new-book">New Book</h1>
 
-                <div>
-                    <input name="username" type="hidden" value="<%=username%>">
-                </div>
-                <div>
-                    <label for="title"> Book Title: </label>
-                    <input id="title" name="title" type="text">
-                </div>
-                <div>
-                    <label for="author"> Author Name: </label>
-                    <input id="author" name="author" type="text">
-                </div>
-                <div>
-                    <label for="year"> Year Published: </label>
-                    <input id="year" name="year" type="number">
-                </div>
-                <div>
-                    <label for="genre"> Book Genre: </label>
-                    <input id="genre" name="genre" type="text">
-                </div>
-                <div>
-                    <label for="cover"> Book Cover Image: </label>
-                    <input id="cover" name="cover" type="text">
-                </div>
-                <div>
-                    <label for="pages"> Pages #: </label>
-                    <input id="pages" name="pages" type="number">
-                </div>
-                <div>
-                    <label for="audioBook"> AudioBook Hours: </label>
-                    <input id="audioBook" name="audioBook" type="number">
-                </div>
-                <div>
-                    <label for="readingStatus"> Book Reading Status:: </label>
-                    <select name="readingStatus" id="readingStatus">
-                        <option value="read">I've read this book</option>
-                        <option value="reading">I'm reading this book</option>
-                        <option value="wanttoread">I want to read this book</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="notes"> Notes: </label>
-                    <input id="notes" name="notes" type="text">
-                </div>
+            <form class="edit-new-page" method="POST" action="/<%=username%>/new">
+                <table style="width:100%">
+                    <tr>
+                        <th>
+                            <input name="username" type="hidden" value="<%=username%>">
+                        </th>
+                        <th style="width:70%">
 
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="title"> Book Title: </label>
+                        </td>
+                        <td>
+                            <input id="title" name="title" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="author"> Author Name: </label>
+                        </td>
+                        <td>
+                            <input id="author" name="author" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="year"> Year Published: </label>
+                        </td>
+                        <td>
+                            <input id="year" name="year" type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="genre"> Book Genre: </label>
+                        </td>
+                        <td>
+                            <input id="genre" name="genre" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="cover"> Book Cover Image: </label>
+                        </td>
+                        <td>
+                            <input id="cover" name="cover" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pages"> Pages #: </label>
+                        </td>
+                        <td>
+                            <input id="pages" name="pages" type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="audioBook"> AudioBook Hours: </label>
+                        </td>
+                        <td>
+                            <input id="audioBook" name="audioBook" type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="readingStatus"> Book Reading Status:: </label>
+                        </td>
+                        <td>
+                            <select name="readingStatus" id="readingStatus">
+                                <option value="read">I've read this book</option>
+                                <option value="reading">I'm reading this book</option>
+                                <option value="wanttoread">I want to read this book</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="notes"> Notes: </label>
+                        </td>
+                        <td>
+                            <input id="notes" name="notes" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
 
-                <input type="submit" value="Add a New Book to your Library">
+                            <input type="submit" value="Add a New Book to your Library">
+                        </td>
+                    </tr>
+                </table>
             </form>
         </body>
 

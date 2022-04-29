@@ -25,6 +25,16 @@
             <div class="container">
                 <div class="book-display">
                     <img class="show-book" src=<%=book.cover %> alt="<%= book.title %>">
+                        <div class="show-page-buttons container">
+                            <form class="edit-button" action="/<%=username%>/<%= book._id %>/edit">
+                                <button class="btn-primary btn" type="submit"> Edit Book</button>
+                            </form>
+
+                            <form class="remove-button" action="/<%=username%>/<%= book._id %>?_method=DELETE"
+                                method="POST">
+                                <button class="btn-primary btn" type="submit"> Remove Book</button>
+                            </form>
+                        </div>
                 </div>
 
                 <div class="book-info">
@@ -44,15 +54,7 @@
                 </div>
             </div>
 
-            <div class="show-page-buttons">
-                <form action="/<%=username%>/<%= book._id %>/edit">
-                    <input type="submit" value="Edit Book">
-                </form>
 
-                <form action="/<%=username%>/<%= book._id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="Remove Book">
-                </form>
-            </div>
 
     </body>
 
