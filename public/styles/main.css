@@ -1,3 +1,7 @@
+body {
+    background-color: #fefae0;
+}
+
 .username {
     float: right;
     margin-left: auto;
