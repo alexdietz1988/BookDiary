@@ -7,58 +7,110 @@
 
             <main>
 
-            <h1 class="edit-title">Edit Book</h1>
-            <form class="edit-new-page" method="POST" action="/<%=username%>/<%= bookId%>?_method=PUT">
-                <div>
-                    <input name="username" type="hidden" value="<%=username%>">
-                </div>
+                <h1 class="edit-title">Edit Book</h1>
+                <form class="edit-new-page" method="POST" action="/<%=username%>/<%= bookId%>?_method=PUT">
+                    <table style="width:100%">
 
-                <div>
-                    <label> Book Title: </label>
-                    <input name="title" type="text" value="<%= book.title%>">
-                </div>
-                <div>
-                    <label> Author Name: </label>
-                    <input name="author" type="text" value="<%= book.author%>">
-                </div>
+                        <tr>
+                            <th>
+                                <input name="username" type="hidden" value="<%=username%>">
+                            </th>
+                            <th style="width:70%"></th>
+                        </tr>
 
-                <div>
-                    <label for="year"> Year Published: </label>
-                    <input id="year" name="year" type="number" value="<%= book.year%>">
-                </div>
+                        <tr>
+                            <td>
+                                <label> Book Title: </label>
+                            </td>
+                            <td>
+                                <input name="title" type="text" value="<%= book.title%>">
+                            </td>
+                        </tr>
 
-                <div>
-                    <label for="genre"> Book Genre: </label>
-                    <input id="genre" name="genre" type="text" value="<%= book.genre%>">
-                </div>
-                <div>
-                    <label for="cover"> Book Cover Image: </label>
-                    <input id="cover" name="cover" type="text" value="<%= book.cover%>">
-                </div>
-                <div>
-                    <label for="pages"> Pages #: </label>
-                    <input id="pages" name="pages" type="number" value="<%= book.pages%>">
-                </div>
-                <div>
-                    <label for="audioBook"> AudioBook Hours: </label>
-                    <input id="audioBook" name="audioBook" type="number" value="<%= book.audioBook%>">
-                </div>
-                <div>
-                    <label for="readingStatus"> Book Reading Status:: </label>
-                    <select name="readingStatus" id="readingStatus">
-                        <option value="read">I've read this book</option>
-                        <option value="reading">I'm reading this book</option>
-                        <option value="wanttoread">I want to read this book</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="notes"> Notes: </label>
-                    <input id="notes" name="notes" type="text" value="<%= book.notes%>">
-                </div>
+                        <tr>
+                            <td>
+                                <label> Author Name: </label>
+                            </td>
+                            <td>
+                                <input name="author" type="text" value="<%= book.author%>">
+                            </td>
+                        </tr>
 
+                        <tr>
+                            <td>
+                                <label for="year"> Year Published: </label>
+                            </td>
+                            <td>
+                                <input id="year" name="year" type="number" value="<%= book.year%>">
+                            </td>
+                        </tr>
 
-                <input type="submit" value="Edit your Book in the Library">
-            </form>
+                        <tr>
+                            <td>
+                                <label for="genre"> Book Genre: </label>
+                            </td>
+                            <td>
+                                <input id="genre" name="genre" type="text" value="<%= book.genre%>">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="cover"> Book Cover Image: </label>
+                            </td>
+                            <td>
+                                <input id="cover" name="cover" type="text" value="<%= book.cover%>">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="pages"> Pages #: </label>
+                            </td>
+                            <td>
+                                <input id="pages" name="pages" type="number" value="<%= book.pages%>">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="audioBook"> AudioBook Hours: </label>
+                            </td>
+                            <td>
+                                <input id="audioBook" name="audioBook" type="number" value="<%= book.audioBook%>">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="readingStatus"> Book Reading Status:: </label>
+                            </td>
+                            <td>
+                                <select name="readingStatus" id="readingStatus">
+                                    <option value="read">I've read this book</option>
+                                    <option value="reading">I'm reading this book</option>
+                                    <option value="wanttoread">I want to read this book</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="notes"> Notes: </label>
+                            </td>
+                            <td>
+                                <input id="notes" name="notes" type="text" value="<%= book.notes%>">
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <input type="submit" value="Edit your Book in the Library">
+                            </td>
+                        </tr>
+        
+                    </table>
+                </form>
 
             </main>
         </body>

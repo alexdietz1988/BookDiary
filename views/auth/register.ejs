@@ -1,42 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
        
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Diary | Login</title>
-</head>
+  <%- include('../partials/head.ejs',{ pageName : "Register" }) %>
 
 <body>
 
-    <main>
+  <main>
 
-  <form method="POST" action="/auth/register">
-    <div>
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" placeholder="Name">
-    </div>
-    <div>
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username" placeholder="Username">
-    </div>
-    <div>
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email" placeholder="example@domain.com">
-    </div>
-    <div>
-        <label for="password">Password</label>
-        <input type="text" name="password" id="password" placeholder="********">
-    </div>
-    <div>
-        <label for="avatar">Avatar (url; optional)</label>
-        <input type="text" name="avatar" id="avatar" placeholder="Image">
-    </div>
-    <input type="submit" value="Submit">
-  </form>
+    <form method="POST" action="/auth/register">
+      <div>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Name">
+      </div>
+      <div>
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" placeholder="Username">
+      </div>
+      <div>
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" placeholder="example@domain.com">
+      </div>
+      <div>
+          <label for="password">Password</label>
+          <input type="text" name="password" id="password" placeholder="********">
+      </div>
+      <div>
+          <label for="avatar">Avatar (url; optional)</label>
+          <input type="text" name="avatar" id="avatar" placeholder="Image">
+      </div>
+      <input type="submit" value="Submit">
+    </form>
 
-</main>
+  </main>
 
 </body>
 
