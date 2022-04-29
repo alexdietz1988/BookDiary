@@ -9,7 +9,8 @@ a:link {
 }
 
 .navbar {
-    background-color: #606C38;
+    background: rgb(96, 108, 56);
+    background: linear-gradient(90deg, rgba(96, 108, 56, 1) 52%, rgba(221, 161, 94, 1) 100%);
 }
 
 .navLogo {
@@ -37,7 +38,6 @@ a:link {
 
 }
 
-
 .reading-status {
     border: 2px solid #606C38;
     display: inline-block;
@@ -58,6 +58,7 @@ header {
     display: inline-block;
     max-width: 500px;
     margin: 0px 0 25px 20px;
+    /* border: 2px solid #606C38; */
 
 }
 
@@ -68,4 +69,25 @@ header {
 
 .book-notes {
     margin-top: 50px;
+}
+
+.show-page-buttons {
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+/* .edit-page {
+    font-family: arial;
+    display: grid;
+    grid-template-columns: 500px;
+    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    justify-content: center;
+    margin-bottom: 40px;
+} */
+
+.edit-title {
+    margin-top: 15px;
+    text-align: center;
 }

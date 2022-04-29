@@ -4,8 +4,8 @@
     <%- include('partials/nav.ejs') %>
 
         <body>
-            <h1>Edit Book</h1>
-            <form method="POST" action="/<%=username%>/<%= bookId%>?_method=PUT">
+            <h1 class="edit-title">Edit Book</h1>
+            <form class="edit-page" method="POST" action="/<%=username%>/<%= bookId%>?_method=PUT">
                 <div>
                     <input name="username" type="hidden" value="<%=username%>">
                 </div>
