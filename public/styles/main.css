@@ -1,6 +1,6 @@
 body {
     background-color: #fefae0;
-    width: 1000px;
+    width: 100%;
     margin: 0 auto;
     max-width: 75vw;
 }
@@ -10,6 +10,15 @@ h1 {
     margin: 15px 0 30px;
 }
 
+.submit-Btn {
+    text-align: center;
+    margin: 150px;
+}
+
+table {
+    text-align: center;
+}
+
 a:link {
     text-decoration: none;
 }
@@ -17,6 +26,7 @@ a:link {
 .navbar {
     background: rgb(96, 108, 56);
     background: linear-gradient(90deg, rgba(96, 108, 56, 1) 52%, rgba(221, 161, 94, 1) 100%);
+
 }
 
 .navLogo {
@@ -125,6 +135,7 @@ section {
 
 main {
     margin-top: 40px;
+    max-width: 700px;
 }
 
 .home-library {

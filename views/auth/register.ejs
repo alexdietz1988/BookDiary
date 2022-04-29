@@ -4,31 +4,80 @@
   <%- include('../partials/head.ejs',{ pageName : "Register" }) %>
 
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <div><img
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.Z5y5YoDLQk7a6BhgcMdKHAHaJN%26pid%3DApi&f=1"
+                class="navLogo"></div>
+        <a class="navbar-brand" href="/register">Book Diary</a>
 
+    </div>
+</nav>
+<h1>Book Diary Registration</h1>
   <main>
 
-    <form method="POST" action="/auth/register">
+    <form class="edit-new-page" method="POST" action="/auth/register">
       <div>
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" placeholder="Name">
+        <table style="width:100%">
+          <tr>
+            <th>
+    
+            </th>
+            <th style="width:70%">
+  
+            </th>
+          </tr>
+  
+          <tr>
+            <td>
+              <label for="name">Name:</label>
+            </td>
+            <td>     
+              <input type="text" name="name" id="name" placeholder="Name">
+            </td>
+          </tr>
+    
+          <tr>
+            <td>
+              <label for="username">Username:</label>
+            </td>
+            <td>     
+              <input type="text" name="username" id="username" placeholder="Username">
+            </td>
+          </tr>
+    
+          <tr>
+            <td>
+              <label for="email">Email:</label>
+            </td>
+            <td>     
+              <input type="text" name="email" id="email" placeholder="example@domain.com">
+            </td>
+          </tr>
+    
+          <tr>
+            <td>
+              <label for="password">Password:</label>
+            </td>
+            <td>     
+              <input type="password" name="password" id="password" placeholder="********">
+            </td>
+          </tr>
+    
+          <tr>
+            <td>
+              <label for="avatar">Avatar (url):</label>
+            </td>
+            <td>     
+              <input type="text" name="avatar" id="avatar" placeholder="Image optional">
+            </td>
+          </tr>
+        </table>
       </div>
-      <div>
-          <label for="username">Username</label>
-          <input type="text" name="username" id="username" placeholder="Username">
+      <div class="submit-Btn">
+        <input type="submit" value="Submit">
       </div>
-      <div>
-          <label for="email">Email</label>
-          <input type="text" name="email" id="email" placeholder="example@domain.com">
-      </div>
-      <div>
-          <label for="password">Password</label>
-          <input type="text" name="password" id="password" placeholder="********">
-      </div>
-      <div>
-          <label for="avatar">Avatar (url; optional)</label>
-          <input type="text" name="avatar" id="avatar" placeholder="Image">
-      </div>
-      <input type="submit" value="Submit">
+      
     </form>
 
   </main>
