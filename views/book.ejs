@@ -8,7 +8,6 @@
     <title>
         <%= book.title %>
     </title>
-<<<<<<< HEAD
     <nav>
         <section>
             <h3><a href='/<%=username%>/new'> Add a new book</a></h3>
@@ -23,8 +22,6 @@
             <h3><a href='/<%=username%>/finishedreading'>Completed</a></h3>
         </section>
     </nav>
-=======
->>>>>>> e4122b1b4a9d6b425cec3e26c973331048b1d706
 </head>
 
 <body>
@@ -35,7 +32,6 @@
 
     <div class="bookDisplay">
         <img src=<%=book.cover %> alt="<%= book.title %>">
-<<<<<<< HEAD
             <p>Reading Status:
 
                 <% if (book.readingStatus==="reading" ) { %>
@@ -47,9 +43,6 @@
                                 <% if (book.readingStatus==="wanttoread" ) { %>
                                     I want to read this book
                                     <% } %>
-=======
-            <p>Reading Status: <%= book.readingStatus %>
->>>>>>> e4122b1b4a9d6b425cec3e26c973331048b1d706
             </p>
     </div>
 
@@ -72,19 +65,11 @@
     </div>
 
     <div class="showPageButtons">
-<<<<<<< HEAD
         <form action="/<%=username%>/<%= book._id %>/edit">
             <input type="submit" value="Edit Book">
         </form>
 
         <form action="/<%=username%>/<%= book._id %>?_method=DELETE" method="POST">
-=======
-        <form action="/<%= book._id %>/edit">
-            <input type="submit" value="Edit Book">
-        </form>
-
-        <form action="/<%= book._id %>/delete">
->>>>>>> e4122b1b4a9d6b425cec3e26c973331048b1d706
             <input type="submit" value="Remove Book">
         </form>
     </div>
