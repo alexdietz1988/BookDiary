@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head.ejs',{ pageName : "New Book" }) %>
-    <%- include('partials/nav.ejs') %>
+    
 
         <body>
+        <%- include('partials/nav.ejs') %>
+        <main>
             <h1 class="new-book">New Book</h1>
 
             <form class="edit-new-page" method="POST" action="/<%=username%>/new">
@@ -100,6 +102,7 @@
                     </tr>
                 </table>
             </form>
+        </main>
         </body>
 
 </html>
