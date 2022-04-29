@@ -1,5 +1,7 @@
 body {
     background-color: #fefae0;
+    width: 1000px;
+    margin: 0 auto;
 }
 
 a:link {
@@ -32,5 +34,38 @@ a:link {
 .cover-grid {
     width: 150px;
     border: 1px solid black;
-    
+
+}
+
+
+.reading-status {
+    border: 2px solid #606C38;
+    display: inline-block;
+    padding: 5px;
+}
+
+header {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.show-book {
+    width: 300px;
+}
+
+.book-info {
+    display: inline-block;
+    max-width: 500px;
+    margin: 0px 0 25px 20px;
+
+}
+
+.book-display {
+    display: inline-block;
+
+}
+
+.book-notes {
+    margin-top: 50px;
 }
