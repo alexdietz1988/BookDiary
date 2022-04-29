@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head.ejs',{ pageName : "Home" }) %>
+    <%- include('partials/nav.ejs') %>
 
-    <body>
-        <%- include('partials/header.ejs') %>
-            <%- include('partials/nav.ejs') %>
+        <body>
+            <%- include('partials/header.ejs') %>
                 <main>
-
-                    <section>
-                        <h3><a href='/<%=username%>/new'> Add a new book</a></h3>
-                    </section>
                     <section>
                         <h3><a href='/<%=username%>/currentlyreading'>Current Reads</a></h3>
                     </section>
@@ -21,6 +17,6 @@
                     </section>
 
                 </main>
-    </body>
+        </body>
 
 </html>

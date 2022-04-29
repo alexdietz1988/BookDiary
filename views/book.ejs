@@ -1,79 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= book.title %>
-    </title>
-    <nav>
-        <section>
-            <h3><a href='/<%=username%>/new'> Add a new book</a></h3>
-        </section>
-        <section>
-            <h3><a href='/<%=username%>/currentlyreading'>Current Reads</a></h3>
-        </section>
-        <section>
-            <h3><a href='/<%=username%>/wanttoread'>Future Reads</a></h3>
-        </section>
-        <section>
-            <h3><a href='/<%=username%>/finishedreading'>Completed</a></h3>
-        </section>
-    </nav>
-</head>
+<%- include('partials/head.ejs',{ pageName : book.title }) %>
+    <%- include('partials/nav.ejs') %>
 
-<body>
+        <body>
 
-    <h1>
-        <%= book.title %>
-    </h1>
+            <h1>
+                <%= book.title %>
+            </h1>
 
-    <div class="bookDisplay">
-        <img src=<%=book.cover %> alt="<%= book.title %>">
-            <p>Reading Status:
+            <div class="bookDisplay">
+                <img src=<%=book.cover %> alt="<%= book.title %>">
+                    <p>Reading Status:
 
-                <% if (book.readingStatus==="reading" ) { %>
-                    I'm reading this book
-                    <% } %>
-                        <% if (book.readingStatus==="read" ) { %>
-                            I've read this book
+                        <% if (book.readingStatus==="reading" ) { %>
+                            I'm reading this book
                             <% } %>
-                                <% if (book.readingStatus==="wanttoread" ) { %>
-                                    I want to read this book
+                                <% if (book.readingStatus==="read" ) { %>
+                                    I've read this book
                                     <% } %>
-            </p>
-    </div>
+                                        <% if (book.readingStatus==="wanttoread" ) { %>
+                                            I want to read this book
+                                            <% } %>
+                    </p>
+            </div>
 
-    <div class="bookInfo">
-        <p>Author: <%= book.author %>
-        </p>
-        <p>Year Published: <%= book.year %>
-        </p>
-        <p>Genre: <%= book.genre %>
-        </p>
-        <p>Pages: <%= book.pages %>
-        </p>
-        <p>Audiobook Length: <%= book.audioBook %>
-        </p>
-    </div>
+            <div class="bookInfo">
+                <p>Author: <%= book.author %>
+                </p>
+                <p>Year Published: <%= book.year %>
+                </p>
+                <p>Genre: <%= book.genre %>
+                </p>
+                <p>Pages: <%= book.pages %>
+                </p>
+                <p>Audiobook Length: <%= book.audioBook %>
+                </p>
+            </div>
 
-    <div class="bookNotes">
-        <p>Notes: <%= book.notes %>
-        </p>
-    </div>
+            <div class="bookNotes">
+                <p>Notes: <%= book.notes %>
+                </p>
+            </div>
 
-    <div class="showPageButtons">
-        <form action="/<%=username%>/<%= book._id %>/edit">
-            <input type="submit" value="Edit Book">
-        </form>
+            <div class="showPageButtons">
+                <form action="/<%=username%>/<%= book._id %>/edit">
+                    <input type="submit" value="Edit Book">
+                </form>
 
-        <form action="/<%=username%>/<%= book._id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Remove Book">
-        </form>
-    </div>
+                <form action="/<%=username%>/<%= book._id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Remove Book">
+                </form>
+            </div>
 
-</body>
+        </body>
 
 </html>

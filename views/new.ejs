@@ -1,64 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include('partials/head.ejs',{ pageName : "New Book" }) %>
+    <%- include('partials/nav.ejs') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Book</title>
-</head>
+        <body>
+            <h1>New Book</h1>
+            <form method="POST" action="/<%=username%>/new">
 
-<body>
-    <h1>New Book</h1>
-    <form method="POST" action="/<%=username%>/new">
-
-        <div>
-            <input name="username" type="hidden" value="<%=username%>">
-        </div>
-        <div>
-            <label for="title"> Book Title: </label>
-            <input id="title" name="title" type="text">
-        </div>
-        <div>
-            <label for="author"> Author Name: </label>
-            <input id="author" name="author" type="text">
-        </div>
-        <div>
-            <label for="year"> Year Published: </label>
-            <input id="year" name="year" type="number">
-        </div>
-        <div>
-            <label for="genre"> Book Genre: </label>
-            <input id="genre" name="genre" type="text">
-        </div>
-        <div>
-            <label for="cover"> Book Cover Image: </label>
-            <input id="cover" name="cover" type="text">
-        </div>
-        <div>
-            <label for="pages"> Pages #: </label>
-            <input id="pages" name="pages" type="number">
-        </div>
-        <div>
-            <label for="audioBook"> AudioBook Hours: </label>
-            <input id="audioBook" name="audioBook" type="number">
-        </div>
-        <div>
-            <label for="readingStatus"> Book Reading Status:: </label>
-            <select name="readingStatus" id="readingStatus">
-                <option value="read">I've read this book</option>
-                <option value="reading">I'm reading this book</option>
-                <option value="wanttoread">I want to read this book</option>
-            </select>
-        </div>
-        <div>
-            <label for="notes"> Notes: </label>
-            <input id="notes" name="notes" type="text">
-        </div>
+                <div>
+                    <input name="username" type="hidden" value="<%=username%>">
+                </div>
+                <div>
+                    <label for="title"> Book Title: </label>
+                    <input id="title" name="title" type="text">
+                </div>
+                <div>
+                    <label for="author"> Author Name: </label>
+                    <input id="author" name="author" type="text">
+                </div>
+                <div>
+                    <label for="year"> Year Published: </label>
+                    <input id="year" name="year" type="number">
+                </div>
+                <div>
+                    <label for="genre"> Book Genre: </label>
+                    <input id="genre" name="genre" type="text">
+                </div>
+                <div>
+                    <label for="cover"> Book Cover Image: </label>
+                    <input id="cover" name="cover" type="text">
+                </div>
+                <div>
+                    <label for="pages"> Pages #: </label>
+                    <input id="pages" name="pages" type="number">
+                </div>
+                <div>
+                    <label for="audioBook"> AudioBook Hours: </label>
+                    <input id="audioBook" name="audioBook" type="number">
+                </div>
+                <div>
+                    <label for="readingStatus"> Book Reading Status:: </label>
+                    <select name="readingStatus" id="readingStatus">
+                        <option value="read">I've read this book</option>
+                        <option value="reading">I'm reading this book</option>
+                        <option value="wanttoread">I want to read this book</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="notes"> Notes: </label>
+                    <input id="notes" name="notes" type="text">
+                </div>
 
 
-        <input type="submit" value="Add a New Book to your Library">
-    </form>
-</body>
+                <input type="submit" value="Add a New Book to your Library">
+            </form>
+        </body>
 
 </html>

@@ -1,0 +1,23 @@
+<nav class="navbar">
+    <button class="home">
+        <a href='/<%=username%>/home'> HOME</a>
+    </button>
+
+    <button>
+        <a href='/<%=username%>/wanttoread'> Books I want to read</a>
+    </button>
+    <button>
+        <a href='/<%=username%>/currentlyreading'> Books I'm reading</a>
+    </button>
+    <button>
+        <a href='/<%=username%>/finishedreading'> Books I've read</a>
+    </button>
+    <button><a href='/<%=username%>/new'> Add New Book</a>
+    </button>
+
+    <button class="username">
+        <a href='/<%=username%>/home'>
+            <%=username%> logged in
+        </a>
+    </button>
+</nav>
