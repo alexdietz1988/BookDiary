@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+       
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Diary | Login</title>
+    </head>
+
+    <body>
+
+        <div class="loginHeader">
+            <h1 class="loginTitle">Book Diary</h1>
+            <img src="" placeholder="Book Diary logo" />
+        </div>
+
+        <div class="loginSummary">
+            <h3>A diary for tracking books you've read.</h3>
+        </div>
+
+        <form method="POST" action="/auth/login">
+            <div>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+        
+        <div class="signUp">
+                <h3><a href="/register">Register</a></h3>
+        </div>
+
+    </body>
+</html>
