@@ -16,12 +16,14 @@
                 <% } %>
 
                     <h2>Cover view</h2>
+                    <div class="container">
                     <% for (let i=0; i < books.length; i++) { %>
-                        <div class="coverContainer">
+                        <div class="cover-container">
                             <a href="/<%= username %>/<%= books[i]._id %>"><img src=<%=books[i].cover %> alt="<%=
-                                    books[i].title %> "></a>
+                                    books[i].title %> " class="cover-grid"></a>
                         </div>
                         <% } %>
+                    </div>
 
         </body>
 

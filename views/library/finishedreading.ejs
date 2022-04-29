@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head.ejs',{ pageName : "Books I've read" }) %>
+
+<body>
+
     <%- include('../partials/nav.ejs') %>
 
-        <body>
+    <h1>Books I've read</h1>
 
-            <h1>Books I've read</h1>
+    <h2>List view</h2>
+    <% for (let i=0; i < books.length; i++) { %>
+        <p><a href="/<%= username %>/<%= books[i]._id %>">
+                <%= `${books[i].author}, ${books[i].title}` %>
+            </a></p>
+        <% } %>
 
-            <h2>List view</h2>
-            <% for (let i=0; i < books.length; i++) { %>
-                <p><a href="/<%= username %>/<%= books[i]._id %>">
-                        <%= `${books[i].author}, ${books[i].title}` %>
-                    </a></p>
-                <% } %>
+    <h2>Cover view</h2>
+    <div class="container">
+        <% for (let i=0; i < books.length; i++) { %>
+        <div class="cover-container">
+            <a href="/<%= username %>/<%= books[i]._id %>"><img src=<%=books[i].cover %> alt="<%=
+                    books[i].title %> " class="cover-grid"></a>
+        </div>
+        <% } %>
+    </div>
 
-                    <h2>Cover view</h2>
-                    <% for (let i=0; i < books.length; i++) { %>
-                        <div class="coverContainer">
-                            <a href="/<%= username %>/<%= books[i]._id %>"><img src=<%=books[i].cover %> alt="<%=
-                                    books[i].title %> "></a>
-                        </div>
-                        <% } %>
-
-        </body>
+</body>
 
 </html>

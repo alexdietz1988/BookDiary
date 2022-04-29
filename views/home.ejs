@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head.ejs',{ pageName : "Home" }) %>
-    <%- include('partials/nav.ejs') %>
 
-        <body>
-                <main>
-                    <section>
-                        <h3><a href='/<%=username%>/currentlyreading'>Current Reads</a></h3>
-                    </section>
-                    <section>
-                        <h3><a href='/<%=username%>/wanttoread'>Future Reads</a></h3>
-                    </section>
-                    <section>
-                        <h3><a href='/<%=username%>/finishedreading'>Completed</a></h3>
-                    </section>
+<body>
+<%- include('partials/nav.ejs') %>
 
-                </main>
-        </body>
+<h3><a href='/<%=username%>/currentlyreading'>Books I'm reading</a></h3>
+<h3><a href='/<%=username%>/wanttoread'>Books I want to read</a></h3>
+<h3><a href='/<%=username%>/finishedreading'>Books I've read</a></h3>
+
+</body>
 
 </html>

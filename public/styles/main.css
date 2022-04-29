@@ -7,9 +7,30 @@ a:link {
 }
 
 .navbar {
-    background-color: #84a59d;
+    background-color: #606C38;
 }
 
 .navLogo {
     width: 20px
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.cover-container {
+    margin: 20px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-grid {
+    width: 150px;
+    border: 1px solid black;
+    
 }
