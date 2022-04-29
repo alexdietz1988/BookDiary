@@ -19,9 +19,18 @@ router.get('/login', (req, res) => {
 })
 
 // Home - Links to user's bookshelves
-router.get('/:username/home', (req, res,) => {
-    const context = { username: req.params.username }
-    res.render('home.ejs', context)
+router.get('/:username/home', async (req, res, next) => {
+    try {
+        const currentlyReading = await db.Book.find({ username: req.params.username, readingStatus: 'reading' })
+        const wantToRead = await db.Book.find({ username: req.params.username, readingStatus: 'wanttoread' })
+        const read = await db.Book.find({ username: req.params.username, readingStatus: 'read' })
+        const context = { currentlyReading: currentlyReading, wantToRead: wantToRead, read: read, username: req.params.username }
+        return res.render('home.ejs', context)
+    } catch (error) {
+        console.log(error)
+        req.error = error
+        return next()
+    }
 })
 
 // Currently Reading
