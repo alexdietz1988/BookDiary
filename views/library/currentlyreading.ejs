@@ -11,7 +11,7 @@
 <body>
 
     <nav>
-        <ul>
+        <ul class="flex flex-column">
             <li><a href="/<%= username %>/home">Home</a></li>
             <li><a href="/<%= username %>/currentlyreading">Currently Reading</a></li>
             <li><a href="/<%= username %>/finishedreading">Finished Reading</a></li>
@@ -19,7 +19,7 @@
         </ul>
     </nav>
 
-    <h1>Currently Reading</h1>
+    <h1 class="f3">Currently Reading</h1>
 
     <h2>List view</h2>
     <% for (let i=0; i < books.length; i++) { %>
