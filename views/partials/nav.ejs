@@ -1,23 +1,41 @@
-<nav class="navbar">
-    <button class="home">
-        <a href='/<%=username%>/home'> HOME</a>
-    </button>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.Z5y5YoDLQk7a6BhgcMdKHAHaJN%26pid%3DApi&f=1" class="navLogo"></div>
+        <a class="navbar-brand" href="/<%=username%>/home">Book Diary</a>
 
-    <button>
-        <a href='/<%=username%>/wanttoread'> Books I want to read</a>
-    </button>
-    <button>
-        <a href='/<%=username%>/currentlyreading'> Books I'm reading</a>
-    </button>
-    <button>
-        <a href='/<%=username%>/finishedreading'> Books I've read</a>
-    </button>
-    <button><a href='/<%=username%>/new'> Add New Book</a>
-    </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-    <button class="username">
-        <a href='/<%=username%>/home'>
-            <%=username%> logged in
-        </a>
-    </button>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href='/<%=username%>/home'> HOME</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href='/<%=username%>/wanttoread'>Books I want to read</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href='/<%=username%>/currentlyreading'>Books I'm reading</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href='/<%=username%>/finishedreading'>Books I've read</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href='/<%=username%>/new'>Add New Book</a>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href='/<%=username%>/home'><%=username%> logged in</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
 </nav>

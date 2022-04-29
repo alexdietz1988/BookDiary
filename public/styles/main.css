@@ -2,6 +2,10 @@ body {
     background-color: #fefae0;
 }
 
+.navLogo {
+    width: 20px
+}
+
 .username {
     float: right;
     margin-left: auto;
@@ -15,8 +19,6 @@ body {
 .navbar {
     background-color: #84a59d;
     padding: 10px;
-    display: flex;
-    justify-content: flex-end;
 }
 
 button {
