@@ -2,7 +2,7 @@ body {
     background-color: #fefae0;
     width: 100%;
     margin: 0 auto;
-    max-width: 75vw;
+    
 }
 
 h1 {
@@ -134,8 +134,13 @@ section {
 }
 
 main {
+    text-align: center;
     margin-top: 40px;
-    max-width: 700px;
+    max-width: 75vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
 }
 
 .home-library {
@@ -147,3 +152,4 @@ main {
     color: #FEFAE0;
     margin-top: 10px;
 }
+
