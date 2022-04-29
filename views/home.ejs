@@ -8,7 +8,7 @@
 <main>
 
 <section>
-    <h3><a href='/<%=username%>/currentlyreading'>Books I'm reading</a></h3>
+    <h3><a class="home-library" href='/<%=username%>/currentlyreading'>Books I'm reading</a></h3>
 
     <div class="container">
         <% for (let i=0; i < currentlyReading.length && i < 8; i++) { %>
@@ -17,11 +17,13 @@
                         currentlyReading[i].title %> " class="cover-grid-home"></a>
             </div>
             <% } %>
-        </div>
+    </div>
+
+    <form action="/<%=username%>/currentlyreading"><button type="submit" class="btn btn-more">More...</button></form>
 </section>
 
 <section>
-    <h3><a href='/<%=username%>/wanttoread'>Books I want to read</a></h3>
+    <h3><a class="home-library" href='/<%=username%>/wanttoread'>Books I want to read</a></h3>
 
     <div class="container">
         <% for (let i=0; i < wantToRead.length && i < 8; i++) { %>
@@ -31,10 +33,12 @@
             </div>
             <% } %>
         </div>
+
+        <form action="/<%=username%>/wanttoread"><button type="submit" class="btn btn-more">More...</button></form>
 </section>
 
 <section>
-<h3><a href='/<%=username%>/finishedreading'>Books I've read</a></h3>
+<h3><a class="home-library" href='/<%=username%>/finishedreading'>Books I've read</a></h3>
 
 <div class="container">
     <% for (let i=0; i < read.length && i < 8; i++) { %>
@@ -44,6 +48,7 @@
         </div>
         <% } %>
     </div>
+    <form action="/<%=username%>/finishedreading"><button type="submit" class="btn btn-more">More...</button></form>
 </section>
 
 </main>

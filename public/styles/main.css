@@ -127,6 +127,12 @@ main {
     margin-top: 40px;
 }
 
-h3 {
+.home-library {
     color: #283618
+}
+
+.btn-more {
+    background-color:#606C38;
+    color: #FEFAE0;
+    margin-top: 10px;
 }
