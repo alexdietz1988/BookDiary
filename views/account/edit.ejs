@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+       
+  <%- include('../partials/head.ejs',{ pageName : "Settings" }) %>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <div>
+      <img
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.Z5y5YoDLQk7a6BhgcMdKHAHaJN%26pid%3DApi&f=1"
+        class="navLogo">
+    </div>
+    <a class="navbar-brand" href="/">Book Diary</a>
+  </div>
+</nav>
+
+<main>
+
+<form method="POST" action="/account/edit?_method=PUT">
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name"/>
+    </div>
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email">
+    </div>
+
+    <div>
+        <label for="avatar">Avatar (url):</label>
+        <input type="text" name="avatar" id="avatar">
+    </div>
+
+    <div class="submit-Btn">
+        <input type="submit" value="Submit">
+    </div>
+    
+  </form>
+
+</main>
+
+</body>
+
+</html>

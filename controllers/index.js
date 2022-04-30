@@ -1,4 +1,25 @@
 module.exports = {
     books: require('./books_controller'),
-    auth: require('./auth_controller')
+    account: require('./account_controller')
 }
+
+// GET ROUTES
+// login/landing: '/', '/account'
+// register: '/account/register'
+// edit account details: '/account/edit'
+// logout: '/account/logout'
+
+// user home: '/home'
+// bookshelves: '/currentlyreading', '/wanttoread', '/finishedreading'
+// new book: '/new'
+// edit book: /:bookId/edit'
+// show book: '/:bookId'
+
+// OTHER ROUTES
+// * POST: register: '/account/register'
+// * POST: login: '/account/login'
+
+// * POST: new book: '/new'
+// * PUT: edit user: '/account/edit'
+// * PUT: edit book: '/:bookId'
+// * DELETE: delete book: '/:bookId'

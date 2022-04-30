@@ -23,7 +23,7 @@ app.use(
     })
 )
 
-app.use('/auth', controllers.auth)
+app.use('/account', controllers.account)
 app.use('/', controllers.books)
 
 app.listen(PORT, () => console.log('Server is running on port ' + PORT))
