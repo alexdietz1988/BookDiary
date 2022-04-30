@@ -83,7 +83,7 @@
 
                         <tr>
                             <td>
-                                <label for="readingStatus"> Book Reading Status:: </label>
+                                <label style="width: 250px" for="readingStatus"> Book Reading Status: </label>
                             </td>
                             <td>
                                 <select style="width: 250px" name="readingStatus" id="readingStatus">
@@ -99,15 +99,10 @@
                                 <label for="notes"> Notes: </label>
                             </td>
                             <td>
-                                <input style="height: 70px; width: 250px" id="notes" name="notes" type="text"
-                                    value="<%= book.notes%>">
+                                <textarea style="height: 100px; width: 250px" id="notes" name="notes"
+                                    type="text"><%= book.notes%></textarea>
                             </td>
                         </tr>
-
-                        <!-- <tr>
-                            <td class="d-flex justify-content-center">
-                            </td>
-                        </tr> -->
 
                     </table>
                     <input class="btn-show mt-4" type="submit" value="Submit">

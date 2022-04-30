@@ -11,9 +11,9 @@
                         <%= book.title %>
                     </h1>
 
-                    <p class="reading-status">Reading Status:
+                    <p class="reading-status"> <b> Reading Status:</b>
                         <% if (book.readingStatus==="reading" ) { %>
-                            I'm reading this book
+                            Currently reading this book
                             <% } %>
                                 <% if (book.readingStatus==="read" ) { %>
                                     I've read this book
@@ -23,7 +23,7 @@
                                             <% } %>
                     </p>
                 </header>
-                <div class="container">
+                <div class="container d-flex align-items-start ">
                     <div class="book-display">
                         <img class="show-book" src=<%=book.cover %> alt="<%= book.title %>">
                             <div class="show-page-buttons container">
@@ -38,18 +38,24 @@
                             </div>
                     </div>
 
-                    <div class="book-info">
-                        <p>Author: <%= book.author %>
+                    <div class="book-info mt-5">
+                        <p> <strong>Author:</strong>
+                            <%= book.author %>
                         </p>
-                        <p>Year Published: <%= book.year %>
+                        <p> <b>Year Published:</b>
+                            <%= book.year %>
                         </p>
-                        <p>Genre: <%= book.genre %>
+                        <p> <b>Genre:</b>
+                            <%= book.genre %>
                         </p>
-                        <p>Pages: <%= book.pages %>
+                        <p> <b>Pages:</b>
+                            <%= book.pages %>
                         </p>
-                        <p>Audiobook Length: <%= book.audioBook %>
+                        <p><b>Audiobook Hours:</b>
+                            <%= book.audioBook %>
                         </p>
-                        <p class="book-notes">Notes: <%= book.notes %>
+                        <p class="book-notes"> <b> Notes: </b>
+                            <%= book.notes %>
                         </p>
 
                     </div>
