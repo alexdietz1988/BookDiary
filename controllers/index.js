@@ -20,5 +20,6 @@ module.exports = {
 // * POST: login: '/account/login'
 
 // * POST: new book: '/new'
+// * PUT: edit user: '/account/edit'
 // * PUT: edit book: '/:bookId'
 // * DELETE: delete book: '/:bookId'
