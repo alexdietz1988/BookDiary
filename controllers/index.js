@@ -4,8 +4,8 @@ module.exports = {
 }
 
 // GET ROUTES
-// Login/landing: '/auth/'
-// Register: '/auth/register'
+// Login/landing: '/login'
+// Register: '/login/register'
 
 // user home: '/home'
 // bookshelves: '/currentlyreading', '/wanttoread', '/finishedreading'
@@ -14,8 +14,8 @@ module.exports = {
 // show book: '/:bookId'
 
 // OTHER ROUTES
-// * POST: register: '/auth/register'
-// * POST: login: '/auth/login'
+// * POST: register: '/login/register'
+// * POST: login: '/login/login'
 
 // * POST: new book: '/new'
 // * PUT: edit book: '/:bookId'
