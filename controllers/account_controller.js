@@ -57,4 +57,15 @@ router.get('/settings', (req, res) => {
     res.render('auth/settings.ejs')
 })
 
+router.get('/logout', async (req, res) => {
+    try {
+        req.session.destroy()
+        return res.redirect('/account')
+    } catch (error) {
+        console.log(error)
+        req.error = error
+        return res.send(error)
+    }
+})
+
 module.exports = router

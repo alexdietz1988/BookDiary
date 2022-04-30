@@ -4,8 +4,9 @@ module.exports = {
 }
 
 // GET ROUTES
-// Login/landing: '/account'
-// Register: '/account/register'
+// login/landing: '/account'
+// register: '/account/register'
+// logout: '/account/logout'
 
 // user home: '/home'
 // bookshelves: '/currentlyreading', '/wanttoread', '/finishedreading'
