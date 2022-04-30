@@ -86,7 +86,7 @@
                                 <label for="readingStatus"> Book Reading Status:: </label>
                             </td>
                             <td>
-                                <select name="readingStatus" id="readingStatus">
+                                <select style="width: 250px" name="readingStatus" id="readingStatus">
                                     <option value="read">I've read this book</option>
                                     <option value="reading">I'm reading this book</option>
                                     <option value="wanttoread">I want to read this book</option>
@@ -99,7 +99,8 @@
                                 <label for="notes"> Notes: </label>
                             </td>
                             <td>
-                                <input id="notes" name="notes" type="text" value="<%= book.notes%>">
+                                <input style="height: 70px; width: 250px" id="notes" name="notes" type="text"
+                                    value="<%= book.notes%>">
                             </td>
                         </tr>
 

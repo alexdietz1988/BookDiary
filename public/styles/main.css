@@ -190,6 +190,10 @@ main {
     top: 1px;
 }
 
-/* tr {
-    width: 300px;
-} */
+td {
+    width: 250px;
+}
+
+input {
+    width: 250px;
+}
