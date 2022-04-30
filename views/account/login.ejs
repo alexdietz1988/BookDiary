@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-       
-    <%- include('../partials/head.ejs',{ pageName : "Login" }) %>
+
+<%- include('../partials/head.ejs',{ pageName : "Login" }) %>
 
     <body>
 
         <main>
 
-        <div class="loginHeader">
-            <h1 class="loginTitle">Book Diary</h1>
-            <img src="" placeholder="Book Diary logo" />
-        </div>
-
-        <div class="loginSummary">
-            <h3>A diary for tracking books you've read.</h3>
-        </div>
-
-        <form method="POST" action="/account/login">
-            <div>
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username">
+            <div class="loginHeader">
+                <h1 class="login-title">Book Diary</h1>
+                <img src="" placeholder="Book Diary logo" />
             </div>
-            <div>
-                <label for="password">Password</label>
-                <input type="text" name="password" id="password">
-            </div>
-            <input type="submit" value="Submit">
-        </form>
-        
-        <div class="signUp">
-                <h3><a href="/register">Register</a></h3>
-        </div>
 
-    </main>
+            <div class="login-summary mb-5">
+                <h3>A diary for tracking books you've read.</h3>
+            </div>
+
+            <form method="POST" action="account/login">
+                <div>
+                    <label for="username">Username</label>
+                    <input class="form-control" type="text" name="username" id="username">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input class="form-control" type="text" name="password" id="password">
+                </div>
+                <input class="btn-show mt-4" type="submit" value="Submit">
+            </form>
+
+            <div class="signUp">
+                <h3><a href="/account/register">Register</a></h3>
+            </div>
+
+        </main>
 
     </body>
+
 </html>
