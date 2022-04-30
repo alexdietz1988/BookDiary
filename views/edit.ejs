@@ -5,13 +5,13 @@
 
         <body>
 
-            <main>
+            <main class="d-flex justify-content-center flex-lg-column">
 
                 <h1 class="edit-title">Edit Book</h1>
                 <form class="edit-new-page" method="POST" action="/<%=username%>/<%= bookId%>?_method=PUT">
-                    <table style="width:100%">
+                    <table class="d-flex justify-content-center">
 
-                        <tr>
+                        <tr class="edit-form-width">
                             <th>
                                 <input name="username" type="hidden" value="<%=username%>">
                             </th>
@@ -86,7 +86,7 @@
                                 <label for="readingStatus"> Book Reading Status:: </label>
                             </td>
                             <td>
-                                <select name="readingStatus" id="readingStatus">
+                                <select style="width: 250px" name="readingStatus" id="readingStatus">
                                     <option value="read">I've read this book</option>
                                     <option value="reading">I'm reading this book</option>
                                     <option value="wanttoread">I want to read this book</option>
@@ -99,17 +99,18 @@
                                 <label for="notes"> Notes: </label>
                             </td>
                             <td>
-                                <input id="notes" name="notes" type="text" value="<%= book.notes%>">
+                                <input style="height: 70px; width: 250px" id="notes" name="notes" type="text"
+                                    value="<%= book.notes%>">
                             </td>
                         </tr>
-                        
-                        <tr>
-                            <td>
-                                <input class="submit-Btn" type="submit" value="Edit your Book in the Library">
+
+                        <!-- <tr>
+                            <td class="d-flex justify-content-center">
                             </td>
-                        </tr>
-        
+                        </tr> -->
+
                     </table>
+                    <input class="btn-show mt-4" type="submit" value="Submit">
                 </form>
 
             </main>

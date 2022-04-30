@@ -2,7 +2,7 @@ body {
     background-color: #fefae0;
     width: 100%;
     margin: 0 auto;
-    
+
 }
 
 h1 {
@@ -33,12 +33,12 @@ a:link {
     width: 20px
 }
 
-.container {
+/* .container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-between;
-}
+} */
 
 .cover-container {
     margin: 20px;
@@ -115,14 +115,14 @@ header {
     padding: 2px 20px;
 }
 
-.edit-new-page {
+/* .edit-new-page {
     font-family: arial;
     display: grid;
     grid-template-columns: 500px;
     grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
     justify-content: center;
     margin-bottom: 40px;
-}
+} */
 
 .edit-title {
     margin-top: 15px;
@@ -137,10 +137,10 @@ main {
     text-align: center;
     margin-top: 40px;
     max-width: 75vw;
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: center;
-    align-content: center;
+    align-content: center; */
 }
 
 .home-library {
@@ -148,8 +148,52 @@ main {
 }
 
 .btn-more {
-    background-color:#606C38;
+    background-color: #606C38;
     color: #FEFAE0;
     margin-top: 10px;
 }
 
+.new-btn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.btn-show {
+    box-shadow: inset 0px 1px 0px 0px #f9eca0;
+    background: linear-gradient(to bottom, #DDA15E 5%, #FEFAE0 100%);
+    background-color: #DDA15E;
+    border-radius: 6px;
+    border: 1px solid #606C38;
+    display: inline-block;
+    cursor: pointer;
+    color: #BC6C25;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ded17c;
+
+}
+
+.btn-show:hover {
+    background: linear-gradient(to bottom, #FEFAE0 5%, #DDA15E 85%);
+    background-color: #DDA15E;
+}
+
+.btn-show:active {
+    position: relative;
+    top: 1px;
+}
+
+td {
+    width: 250px;
+}
+
+input {
+    width: 250px;
+}

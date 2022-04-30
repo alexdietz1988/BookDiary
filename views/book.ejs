@@ -5,57 +5,57 @@
 
     <body>
         <%- include('partials/nav.ejs') %>
-        <main>
-            <header>
-                <h1 class="book-title">
-                    <%= book.title %>
-                </h1>
+            <main>
+                <header>
+                    <h1 class="book-title">
+                        <%= book.title %>
+                    </h1>
 
-                <p class="reading-status">Reading Status:
-                    <% if (book.readingStatus==="reading" ) { %>
-                        I'm reading this book
-                        <% } %>
-                            <% if (book.readingStatus==="read" ) { %>
-                                I've read this book
-                                <% } %>
-                                    <% if (book.readingStatus==="wanttoread" ) { %>
-                                        I want to read this book
-                                        <% } %>
-                </p>
-            </header>
-            <div class="container">
-                <div class="book-display">
-                    <img class="show-book" src=<%=book.cover %> alt="<%= book.title %>">
-                        <div class="show-page-buttons container">
-                            <form class="edit-button" action="/<%=username%>/<%= book._id %>/edit">
-                                <button class="btn-primary btn" type="submit"> Edit Book</button>
-                            </form>
+                    <p class="reading-status">Reading Status:
+                        <% if (book.readingStatus==="reading" ) { %>
+                            I'm reading this book
+                            <% } %>
+                                <% if (book.readingStatus==="read" ) { %>
+                                    I've read this book
+                                    <% } %>
+                                        <% if (book.readingStatus==="wanttoread" ) { %>
+                                            I want to read this book
+                                            <% } %>
+                    </p>
+                </header>
+                <div class="container">
+                    <div class="book-display">
+                        <img class="show-book" src=<%=book.cover %> alt="<%= book.title %>">
+                            <div class="show-page-buttons container">
+                                <form class="edit-button" action="/<%=username%>/<%= book._id %>/edit">
+                                    <button class="btn-show" type="submit"> Edit Book</button>
+                                </form>
 
-                            <form class="remove-button" action="/<%=username%>/<%= book._id %>?_method=DELETE"
-                                method="POST">
-                                <button class="btn-primary btn" type="submit"> Remove Book</button>
-                            </form>
-                        </div>
+                                <form class="remove-button" action="/<%=username%>/<%= book._id %>?_method=DELETE"
+                                    method="POST">
+                                    <button class="btn-show" type="submit"> Remove Book</button>
+                                </form>
+                            </div>
+                    </div>
+
+                    <div class="book-info">
+                        <p>Author: <%= book.author %>
+                        </p>
+                        <p>Year Published: <%= book.year %>
+                        </p>
+                        <p>Genre: <%= book.genre %>
+                        </p>
+                        <p>Pages: <%= book.pages %>
+                        </p>
+                        <p>Audiobook Length: <%= book.audioBook %>
+                        </p>
+                        <p class="book-notes">Notes: <%= book.notes %>
+                        </p>
+
+                    </div>
                 </div>
 
-                <div class="book-info">
-                    <p>Author: <%= book.author %>
-                    </p>
-                    <p>Year Published: <%= book.year %>
-                    </p>
-                    <p>Genre: <%= book.genre %>
-                    </p>
-                    <p>Pages: <%= book.pages %>
-                    </p>
-                    <p>Audiobook Length: <%= book.audioBook %>
-                    </p>
-                    <p class="book-notes">Notes: <%= book.notes %>
-                    </p>
-
-                </div>
-            </div>
-
-        </main>
+            </main>
 
     </body>
 
