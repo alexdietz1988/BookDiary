@@ -34,7 +34,7 @@ table {
 }
 
 p {
-    font-family: 'Archivo', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
 }
 
@@ -158,15 +158,6 @@ header {
     padding: 2px 20px;
 }
 
-/* .edit-new-page {
-    font-family: arial;
-    display: grid;
-    grid-template-columns: 500px;
-    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
-    justify-content: center;
-    margin-bottom: 40px;
-} */
-
 .edit-title {
     margin-top: 15px;
     text-align: center;
@@ -180,20 +171,24 @@ main {
     text-align: center;
     max-width: 75vw;
     margin: 40px auto auto;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center; */
 }
 
 .home-library {
     color: #283618
 }
 
+.home-library:hover {
+    color: #606C38
+}
+
 .btn-more {
     background-color: #606C38;
     color: #FEFAE0;
     margin-top: 10px;
+}
+
+.btn-more:hover {
+    color: rgba(221, 161, 94, 1);
 }
 
 .new-btn {
@@ -254,7 +249,6 @@ input {
 
 .cover-view:hover {
     color: #283618;
-    /* background: linear-gradient(to bottom, #faedcd 20%, #DDA15E 60%); */
     background: rgb(96, 108, 56);
     background: linear-gradient(90deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 1) 100%);
     border-radius: 5px;
