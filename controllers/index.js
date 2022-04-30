@@ -6,6 +6,7 @@ module.exports = {
 // GET ROUTES
 // login/landing: '/account'
 // register: '/account/register'
+// edit account details: '/account/edit'
 // logout: '/account/logout'
 
 // user home: '/home'

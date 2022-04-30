@@ -57,6 +57,32 @@ router.get('/settings', (req, res) => {
     res.render('auth/settings.ejs')
 })
 
+router.get('/edit', async (req, res, next) => {
+    try {
+        const username = req.session.username
+        const user = await User.findOne({ username: username })
+        const context = { user }
+        res.render('auth/edit.ejs', context)
+    } catch (error) {
+        console.log(error)
+        req.error = error
+        return next()
+    }
+})
+
+router.put('/edit', async (req, res, next) => {
+    try {
+        const username = req.session.username
+        const user = await User.findOne({ username: username })
+        await User.updateOne(user, req.body)
+        return res.redirect('/home')
+    } catch (error) {
+        console.log(error)
+        req.error = error
+        next()
+    }
+})
+
 router.get('/logout', async (req, res) => {
     try {
         req.session.destroy()
