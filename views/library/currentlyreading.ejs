@@ -8,25 +8,25 @@
 
             <main>
 
-            <h1>Books I'm reading</h1>
+                <h1>Books I'm reading</h1>
 
-            <h2>List view</h2>
-            <% for (let i=0; i < books.length; i++) { %>
-                <p><a href="/<%= username %>/<%= books[i]._id %>">
-                        <%= `${books[i].author}, ${books[i].title}` %>
-                    </a></p>
-                <% } %>
+                <h2>List view</h2>
+                <% for (let i=0; i < books.length; i++) { %>
+                    <p><a href="/<%= username %>/<%= books[i]._id %>">
+                            <%= `${books[i].author}, ${books[i].title}` %>
+                        </a></p>
+                    <% } %>
 
-                    <h2>Cover view</h2>
-                    <div class="container">
-                    <% for (let i=0; i < books.length; i++) { %>
-                        <div class="cover-container">
-                            <a href="/<%= username %>/<%= books[i]._id %>"><img src=<%=books[i].cover %> alt="<%=
-                                    books[i].title %> " class="cover-grid"></a>
+                        <h2>Cover view</h2>
+                        <div class="container d-flex justify-content-center">
+                            <% for (let i=0; i < books.length; i++) { %>
+                                <div class="cover-container">
+                                    <a href="/<%= username %>/<%= books[i]._id %>"><img src=<%=books[i].cover %> alt="
+                                        <%= books[i].title %> " class="cover-grid"></a>
+                                </div>
+                                <% } %>
                         </div>
-                        <% } %>
-                    </div>
-                </main>
+            </main>
         </body>
 
 </html>

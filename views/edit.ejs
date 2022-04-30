@@ -5,13 +5,13 @@
 
         <body>
 
-            <main>
+            <main class="d-flex justify-content-center flex-lg-column">
 
                 <h1 class="edit-title">Edit Book</h1>
                 <form class="edit-new-page" method="POST" action="/<%=username%>/<%= bookId%>?_method=PUT">
-                    <table style="width:100%">
+                    <table class="d-flex justify-content-center">
 
-                        <tr>
+                        <tr class="edit-form-width">
                             <th>
                                 <input name="username" type="hidden" value="<%=username%>">
                             </th>
@@ -102,14 +102,14 @@
                                 <input id="notes" name="notes" type="text" value="<%= book.notes%>">
                             </td>
                         </tr>
-                        
-                        <tr>
-                            <td>
-                                <input class="submit-Btn" type="submit" value="Edit your Book in the Library">
+
+                        <!-- <tr>
+                            <td class="d-flex justify-content-center">
                             </td>
-                        </tr>
-        
+                        </tr> -->
+
                     </table>
+                    <input class="btn-show mt-4" type="submit" value="Submit">
                 </form>
 
             </main>
