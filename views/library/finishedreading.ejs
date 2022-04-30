@@ -12,7 +12,7 @@
 
                 <h2>List view</h2>
                 <% for (let i=0; i < books.length; i++) { %>
-                    <p><a href="/<%= username %>/<%= books[i]._id %>">
+                    <p><a class="list-link" href="/<%= username %>/<%= books[i]._id %>">
                             <%= `${books[i].author}, ${books[i].title}` %>
                         </a></p>
                     <% } %>
@@ -21,8 +21,10 @@
                         <div class="container d-flex justify-content-center">
                             <% for (let i=0; i < books.length; i++) { %>
                                 <div class="cover-container">
-                                    <a href="/<%= username %>/<%= books[i]._id %>"><img src=<%=books[i].cover %> alt="
-                                        <%= books[i].title %> " class="cover-grid"></a>
+                                    <a class="cover-view" href="/<%= username %>/<%= books[i]._id %>"><img
+                                            src=<%=books[i].cover %> alt="
+                                        <%= books[i].title %> " class="cover-grid">
+                                    </a>
                                 </div>
                                 <% } %>
                         </div>
