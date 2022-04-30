@@ -3,7 +3,7 @@ const router = express.Router()
 const bcrypt = require('bcryptjs')
 const { User } = require('../models')
 
-// Landing page
+// Login/landing page
 router.get('/', (req, res) => {
     res.render('auth/login.ejs')
 })
@@ -30,11 +30,6 @@ router.post('/register', async (req, res) => {
         req.error = error
         return res.send(error)
     }
-})
-
-// Login
-router.get('/login', (req, res) => {
-    res.render('auth/login.ejs')
 })
 
 router.post('/login', async (req, res) => {
