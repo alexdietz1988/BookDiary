@@ -1,15 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap');
+/* book tiitle */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Tapestry&display=swap');
+
+/* edit/new page*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+/* edit/new page heading */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+/* h for books list , h2*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+
+
 
 body {
     background-color: #fefae0;
     width: 100%;
     margin: 0 auto;
-
 }
 
 h1 {
     text-align: center;
     margin: 15px 0 30px;
+}
+
+h2 {
+    font-family: 'Archivo', sans-serif;
+
+}
+
+table {
+    font-family: 'Rubik', sans-serif;
+    font-size: 17px;
+}
+
+p {
+    font-family: 'Archivo', sans-serif;
+    font-size: 18px;
+}
+
+.new-book,
+.edit-title {
+    font-family: 'Abril Fatface', cursive;
+}
+
+.books-list-h {
+    font-size: 35px;
+    font-family: 'Archivo', sans-serif;
 }
 
 .submit-Btn {
@@ -96,7 +132,6 @@ header {
     max-width: 500px;
     margin: 0px 0 25px 20px;
     /* border: 2px solid #606C38; */
-
 }
 
 .book-display {
@@ -143,9 +178,8 @@ section {
 
 main {
     text-align: center;
-    margin-top: 40px;
     max-width: 75vw;
-    margin: 0 auto;
+    margin: 40px auto auto;
     /* display: flex;
     flex-direction: row;
     justify-content: center;
@@ -236,6 +270,9 @@ li>a:hover {
 
 .book-title {
     font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Tapestry', cursive;
 }
 
-textare
+textarea {
+    resize: none;
+}
