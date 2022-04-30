@@ -27,11 +27,11 @@
                     <div class="book-display">
                         <img class="show-book" src=<%=book.cover %> alt="<%= book.title %>">
                             <div class="show-page-buttons container">
-                                <form class="edit-button" action="/<%=username%>/<%= book._id %>/edit">
+                                <form class="edit-button" action="/<%= book._id %>/edit">
                                     <button class="btn-show" type="submit"> Edit Book</button>
                                 </form>
 
-                                <form class="remove-button" action="/<%=username%>/<%= book._id %>?_method=DELETE"
+                                <form class="remove-button" action="/<%= book._id %>?_method=DELETE"
                                     method="POST">
                                     <button class="btn-show" type="submit"> Remove Book</button>
                                 </form>

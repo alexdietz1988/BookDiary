@@ -5,12 +5,12 @@ const { User } = require('../models')
 
 // Login/landing page
 router.get('/', (req, res) => {
-    res.render('auth/login.ejs')
+    res.render('account/login.ejs')
 })
 
 // Register
 router.get('/register', (req, res) => {
-    res.render('auth/register.ejs')
+    res.render('account/register.ejs')
 })
 
 router.post('/register', async (req, res) => {
@@ -54,7 +54,7 @@ router.post('/login', async (req, res) => {
 })
 
 router.get('/settings', (req, res) => {
-    res.render('auth/settings.ejs')
+    res.render('account/settings.ejs')
 })
 
 router.get('/edit', async (req, res, next) => {
@@ -62,7 +62,7 @@ router.get('/edit', async (req, res, next) => {
         const username = req.session.username
         const user = await User.findOne({ username: username })
         const context = { user }
-        res.render('auth/edit.ejs', context)
+        res.render('account/edit.ejs', context)
     } catch (error) {
         console.log(error)
         req.error = error

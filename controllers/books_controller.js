@@ -2,6 +2,10 @@ const express = require('express')
 const router = express.Router()
 const db = require('../models')
 
+router.get('/', (req, res) => {
+    res.render('account/login.ejs')
+})
+
 // Home - Links to user's bookshelves
 router.get('/home', async (req, res, next) => {
     try {
