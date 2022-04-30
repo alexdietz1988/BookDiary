@@ -16,7 +16,7 @@ router.get('/register', (req, res) => {
 router.post('/register', async (req, res) => {
     try {
         const foundUser = await User.exists({ email: req.body.email })
-        if (foundUser) return res.redirect('/account/login')
+        if (foundUser) return res.redirect('/account/')
 
         const salt = await bcrypt.genSalt(12)
         const hash = await bcrypt.hash(req.body.password, salt)
@@ -24,7 +24,7 @@ router.post('/register', async (req, res) => {
 
         await User.create(req.body)
 
-        return res.redirect('/account/login')
+        return res.redirect('/account/')
     } catch (error) {
         console.log(error)
         req.error = error
@@ -51,6 +51,10 @@ router.post('/login', async (req, res) => {
         req.error = error
         return res.send(error)
     }
+})
+
+router.get('/settings', (req, res) => {
+    res.render('auth/settings.ejs')
 })
 
 module.exports = router
