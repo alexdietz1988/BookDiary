@@ -228,6 +228,13 @@ main {
     top: 1px;
 }
 
+.btn-primary {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+
+}
+
 td {
     width: 250px;
 }
@@ -269,4 +276,9 @@ li>a:hover {
 
 textarea {
     resize: none;
+}
+
+footer {
+    background: rgb(96, 108, 56, );
+    background: linear-gradient(90deg, rgba(96, 108, 56, 0.8) 52%, rgba(221, 161, 94, 1) 100%);
 }
