@@ -1,13 +1,51 @@
+/* book tiitle */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Tapestry&display=swap');
+
+/* edit/new page*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+/* edit/new page heading */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+/* h for books list , h2*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+
+
+
 body {
     background-color: #fefae0;
     width: 100%;
     margin: 0 auto;
-
 }
 
 h1 {
     text-align: center;
     margin: 15px 0 30px;
+}
+
+h2 {
+    font-family: 'Archivo', sans-serif;
+
+}
+
+table {
+    font-family: 'Rubik', sans-serif;
+    font-size: 17px;
+}
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+.new-book,
+.edit-title {
+    font-family: 'Abril Fatface', cursive;
+}
+
+.books-list-h {
+    font-size: 35px;
+    font-family: 'Archivo', sans-serif;
 }
 
 .submit-Btn {
@@ -24,13 +62,17 @@ a:link {
 }
 
 .navbar {
-    background: rgb(96, 108, 56);
-    background: linear-gradient(90deg, rgba(96, 108, 56, 1) 52%, rgba(221, 161, 94, 1) 100%);
+    background: rgb(96, 108, 56, );
+    background: linear-gradient(90deg, rgba(96, 108, 56, 0.8) 52%, rgba(221, 161, 94, 1) 100%);
 
 }
 
+li a .nav-item {
+    color: white;
+}
+
 .navLogo {
-    width: 20px
+    width: 20px;
 }
 
 /* .container {
@@ -67,9 +109,12 @@ a:link {
 }
 
 .reading-status {
-    border: 2px solid #606C38;
+    /* border: 2px solid #606C38; */
     display: inline-block;
     padding: 5px;
+    /* border-radius: 5px; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
 }
 
 header {
@@ -87,7 +132,6 @@ header {
     max-width: 500px;
     margin: 0px 0 25px 20px;
     /* border: 2px solid #606C38; */
-
 }
 
 .book-display {
@@ -100,7 +144,6 @@ header {
 }
 
 .show-page-buttons {
-    margin: 10px;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -115,15 +158,6 @@ header {
     padding: 2px 20px;
 }
 
-/* .edit-new-page {
-    font-family: arial;
-    display: grid;
-    grid-template-columns: 500px;
-    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
-    justify-content: center;
-    margin-bottom: 40px;
-} */
-
 .edit-title {
     margin-top: 15px;
     text-align: center;
@@ -135,22 +169,26 @@ section {
 
 main {
     text-align: center;
-    margin-top: 40px;
     max-width: 75vw;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center; */
+    margin: 40px auto auto;
 }
 
 .home-library {
     color: #283618
 }
 
+.home-library:hover {
+    color: #606C38
+}
+
 .btn-more {
     background-color: #606C38;
     color: #FEFAE0;
     margin-top: 10px;
+}
+
+.btn-more:hover {
+    color: rgba(221, 161, 94, 1);
 }
 
 .new-btn {
@@ -196,4 +234,39 @@ td {
 
 input {
     width: 250px;
+}
+
+.list-link {
+    color: #283618
+}
+
+.list-link:hover {
+    color: #283618;
+    background: rgb(96, 108, 56);
+    background: linear-gradient(90deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 1) 100%);
+    border-radius: 5px;
+}
+
+.cover-view:hover {
+    color: #283618;
+    background: rgb(96, 108, 56);
+    background: linear-gradient(90deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 1) 100%);
+    border-radius: 5px;
+    padding: 4px;
+}
+
+li>a:hover {
+    color: #283618;
+    background: linear-gradient(to bottom, #faedcd 20%, #DDA15E 60%);
+    border-radius: 5px;
+}
+
+
+.book-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Tapestry', cursive;
+}
+
+textarea {
+    resize: none;
 }
