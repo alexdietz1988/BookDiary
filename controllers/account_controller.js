@@ -37,7 +37,7 @@ router.post('/login', async (req, res) => {
         const foundUser = await User.findOne({ username: req.body.username })
         if (!foundUser) return res.redirect('/account/register')
         const match = await bcrypt.compare(req.body.password, foundUser.password)
-        
+
         if (!match) return res.send('invalid username or password')
 
         const username = foundUser.username
@@ -54,13 +54,13 @@ router.post('/login', async (req, res) => {
 })
 
 router.get('/settings', (req, res) => {
-    res.render('account/settings.ejs')
+    const context = { username: req.session.currentUser.username }
+    res.render('account/settings.ejs', context)
 })
 
 router.get('/edit', async (req, res, next) => {
     try {
-        const username = req.session.username
-        const user = await User.findOne({ username: username })
+        const user = await User.findOne({ username: req.session.currentUser.username })
         const context = { user }
         res.render('account/edit.ejs', context)
     } catch (error) {
@@ -72,8 +72,7 @@ router.get('/edit', async (req, res, next) => {
 
 router.put('/edit', async (req, res, next) => {
     try {
-        const username = req.session.username
-        const user = await User.findOne({ username: username })
+        const user = await User.findOne({ username: req.session.currentUser.username })
         await User.updateOne(user, req.body)
         return res.redirect('/home')
     } catch (error) {

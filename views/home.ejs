@@ -7,27 +7,28 @@
 
             <main>
 
-                <section>
+                <section class="mb-4">
                     <h3><a class="home-library" href='/currentlyreading'>Books I'm reading</a></h3>
 
-                    <div class="container d-flex justify-content-center">
+                    <div class="container d-flex mb-2">
                         <% for (let i=0; i < currentlyReading.length && i < 8; i++) { %>
                             <div class="cover-container-home">
-                                <a href="/<%= currentlyReading[i]._id %>"><img
-                                        src=<%=currentlyReading[i].cover %> alt="<%= currentlyReading[i].title %> "
-                                        class="cover-grid-home"></a>
+                                <a href="/<%= currentlyReading[i]._id %>"><img src=<%=currentlyReading[i].cover %> alt="
+                                    <%= currentlyReading[i].title %> "
+                                        class="cover-grid-home">
+                                </a>
                             </div>
                             <% } %>
-                    </div>
 
-                    <form action="/currentlyreading"><button type="submit"
-                            class="btn btn-more">More...</button></form>
+                    </div>
+                    <form action="/currentlyreading"><button type="submit" class="btn btn-more">More...</button></form>
+
                 </section>
 
-                <section>
+                <section class="mb-4">
                     <h3><a class="home-library" href='/wanttoread'>Books I want to read</a></h3>
 
-                    <div class="container d-flex justify-content-center">
+                    <div class="container d-flex mb-2">
                         <% for (let i=0; i < wantToRead.length && i < 8; i++) { %>
                             <div class="cover-container-home">
                                 <a href="/<%= wantToRead[i]._id %>"><img src=<%=wantToRead[i].cover %>
@@ -40,19 +41,18 @@
                     </form>
                 </section>
 
-                <section>
+                <section class="mb-4">
                     <h3><a class="home-library" href='/finishedreading'>Books I've read</a></h3>
 
-                    <div class="container d-flex justify-content-center">
+                    <div class="container d-flex mb-2">
                         <% for (let i=0; i < read.length && i < 8; i++) { %>
                             <div class="cover-container-home">
-                                <a href="/<%= read[i]._id %>"><img src=<%=read[i].cover %> alt="<%=
-                                        read[i].title %> " class="cover-grid-home"></a>
+                                <a href="/<%= read[i]._id %>"><img src=<%=read[i].cover %> alt="<%= read[i].title %> "
+                                        class="cover-grid-home"></a>
                             </div>
                             <% } %>
                     </div>
-                    <form action="/finishedreading"><button type="submit"
-                            class="btn btn-more">More...</button></form>
+                    <form action="/finishedreading"><button type="submit" class="btn btn-more">More...</button></form>
                 </section>
 
             </main>

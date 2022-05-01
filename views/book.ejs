@@ -31,8 +31,7 @@
                                     <button class="btn-show" type="submit"> Edit Book</button>
                                 </form>
 
-                                <form class="remove-button" action="/<%= book._id %>?_method=DELETE"
-                                    method="POST">
+                                <form class="remove-button" action="/<%= book._id %>?_method=DELETE" method="POST">
                                     <button class="btn-show" type="submit"> Remove Book</button>
                                 </form>
                             </div>
@@ -62,7 +61,7 @@
                 </div>
 
             </main>
-            <%- include('partials/footer.ejs') %>
+            <%- include('./partials/footer.ejs') %>
     </body>
 
 </html>

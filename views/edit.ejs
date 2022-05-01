@@ -5,107 +5,67 @@
 
         <body>
 
-            <main class="d-flex justify-content-center flex-lg-column">
+            <main>
 
                 <h1 class="edit-title">Edit Book</h1>
-                <form class="edit-new-page" method="POST" action="/<%= bookId%>?_method=PUT">
-                    <table class="d-flex justify-content-center">
+                <form method="POST" action="/<%= bookId%>?_method=PUT" <input name="username" type="hidden"
+                    value="<%=username%>">
+                    <div class="mb-2">
+                        <label> Book Title: </label>
+                        <input class="form-control" name="title" type="text" value="<%= book.title%>">
+                    </div>
+                    <div class="mb-2">
 
-                        <tr class="edit-form-width">
-                            <th>
-                                <input name="username" type="hidden" value="<%=username%>">
-                            </th>
-                            <th style="width:70%"></th>
-                        </tr>
+                        <label> Author Name: </label>
+                        <input class="form-control" name="author" type="text" value="<%= book.author%>">
+                    </div>
 
-                        <tr>
-                            <td>
-                                <label> Book Title: </label>
-                            </td>
-                            <td>
-                                <input name="title" type="text" value="<%= book.title%>">
-                            </td>
-                        </tr>
+                    <div class="mb-2">
 
-                        <tr>
-                            <td>
-                                <label> Author Name: </label>
-                            </td>
-                            <td>
-                                <input name="author" type="text" value="<%= book.author%>">
-                            </td>
-                        </tr>
+                        <label for="year"> Year Published: </label>
+                        <input class="form-control" id="year" name="year" type="number" value="<%= book.year%>">
+                    </div>
 
-                        <tr>
-                            <td>
-                                <label for="year"> Year Published: </label>
-                            </td>
-                            <td>
-                                <input id="year" name="year" type="number" value="<%= book.year%>">
-                            </td>
-                        </tr>
+                    <div class="mb-2">
+                        <label for="genre"> Book Genre: </label>
+                        <input class="form-control" id="genre" name="genre" type="text" value="<%= book.genre%>">
+                    </div>
 
-                        <tr>
-                            <td>
-                                <label for="genre"> Book Genre: </label>
-                            </td>
-                            <td>
-                                <input id="genre" name="genre" type="text" value="<%= book.genre%>">
-                            </td>
-                        </tr>
+                    <div class="mb-2">
+                        <label for="cover"> Book Cover Image: </label>
+                        <input class="form-control" id="cover" name="cover" type="text" value="<%= book.cover%>">
+                    </div>
 
-                        <tr>
-                            <td>
-                                <label for="cover"> Book Cover Image: </label>
-                            </td>
-                            <td>
-                                <input id="cover" name="cover" type="text" value="<%= book.cover%>">
-                            </td>
-                        </tr>
+                    <div class="mb-2">
+                        <label for="pages"> Pages #: </label>
+                        <input class="form-control" id="pages" name="pages" type="number" value="<%= book.pages%>">
+                    </div>
 
-                        <tr>
-                            <td>
-                                <label for="pages"> Pages #: </label>
-                            </td>
-                            <td>
-                                <input id="pages" name="pages" type="number" value="<%= book.pages%>">
-                            </td>
-                        </tr>
+                    <div class="mb-2">
+                        <label for="audioBook"> AudioBook Hours: </label>
+                        <input class="form-control" id="audioBook" name="audioBook" type="number"
+                            value="<%= book.audioBook%>">
+                    </div>
 
-                        <tr>
-                            <td>
-                                <label for="audioBook"> AudioBook Hours: </label>
-                            </td>
-                            <td>
-                                <input id="audioBook" name="audioBook" type="number" value="<%= book.audioBook%>">
-                            </td>
-                        </tr>
+                    <div class="mb-2">
+                        <label for="readingStatus"> Book Reading Status: </label>
 
-                        <tr>
-                            <td>
-                                <label style="width: 250px" for="readingStatus"> Book Reading Status: </label>
-                            </td>
-                            <td>
-                                <select style="width: 250px" name="readingStatus" id="readingStatus">
-                                    <option value="read">I've read this book</option>
-                                    <option value="reading">I'm reading this book</option>
-                                    <option value="wanttoread">I want to read this book</option>
-                                </select>
-                            </td>
-                        </tr>
+                        <select class="form-select" name="readingStatus" id="readingStatus">
+                            <option value="read">I've read this book</option>
+                            <option value="reading">I'm reading this book</option>
+                            <option value="wanttoread">I want to read this book</option>
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label for="notes"> Notes: </label>
 
-                        <tr>
-                            <td>
-                                <label for="notes"> Notes: </label>
-                            </td>
-                            <td>
-                                <textarea style="height: 100px; width: 250px" id="notes" name="notes"
-                                    type="text"><%= book.notes%></textarea>
-                            </td>
-                        </tr>
+                        <textarea class="form-control" rows="4" id="notes" name="notes"
+                            type="text"><%= book.notes%></textarea>
+                    </div>
 
-                    </table>
-                    <input class="btn-show mt-4" type="submit" value="Submit">
+
+                    <input class="btn-show mt-4 mb-5" type="submit" value="Submit">
+
                 </form>
 
             </main>

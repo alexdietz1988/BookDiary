@@ -1,35 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-       
-  <%- include('../partials/head.ejs',{ pageName : "Settings" }) %>
 
-<body>
+<%- include('../partials/head.ejs',{ pageName : "Settings" }) %>
 
-<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid">
-    <div>
-      <img
-        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.Z5y5YoDLQk7a6BhgcMdKHAHaJN%26pid%3DApi&f=1"
-        class="navLogo">
-    </div>
-    <a class="navbar-brand" href="/">Book Diary</a>
-  </div>
-</nav>
+  <body>
+    <%- include('../partials/nav.ejs') %>
 
-<main>
+      <main>
 
-<h1>Settings</h1>
+        <h1 class="settings-heading">Settings</h1>
+        <div class="d-flex justify-content-center mb-4">
+          <form method="GET" action="/account/edit">
+            <button class="btn-show">
+              Edit Account Details
+            </button>
+          </form>
+        </div>
+        <div class="d-flex justify-content-center">
+          <form method="GET" action="/account/logout">
+            <button class="btn-show ">
+              Log Out
+            </button>
+          </form>
+        </div>
+      </main>
 
-<form method="GET" action="/account/edit">
-  <input type="submit" value="Edit Account Details">
-</form>
-
-<form method="GET" action="/account/logout">
-  <input type="submit" value="Log Out">
-</form>
-
-</main>
-
-</body>
+      <%- include('../partials/footer.ejs') %>
+  </body>
 
 </html>
