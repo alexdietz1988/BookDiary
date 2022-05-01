@@ -1,4 +1,3 @@
-=
 /* book tiitle */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Tapestry&display=swap');
 
@@ -179,7 +178,8 @@ section {
 main {
     text-align: center;
     max-width: 75vw;
-    margin: 40px auto auto;
+    margin: 40px auto;
+
 }
 
 .home-library {
@@ -285,4 +285,10 @@ textarea {
 footer {
     background: rgb(96, 108, 56, );
     background: linear-gradient(90deg, rgba(96, 108, 56, 0.8) 52%, rgba(221, 161, 94, 1) 100%);
+}
+
+@media screen and (max-width:535px) {
+    .input-info {
+        width: 90%;
+    }
 }

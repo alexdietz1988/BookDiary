@@ -22,8 +22,8 @@
                         <div class="container d-flex justify-content-center">
                             <% for (let i=0; i < books.length; i++) { %>
                                 <div class="cover-container">
-                                    <a class="cover-view" href="/<%= books[i]._id %>"><img
-                                            src=<%=books[i].cover %> alt="
+                                    <a class="cover-view" href="/<%= books[i]._id %>"><img src=<%=books[i].cover %>
+                                        alt="
                                         <%= books[i].title %> " class="cover-grid">
                                     </a>
                                 </div>
@@ -31,7 +31,7 @@
                         </div>
 
             </main>
-            <%- include('partials/footer.ejs') %>
+            <%- include('../partials/footer.ejs') %>
     </body>
 
 </html>
