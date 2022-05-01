@@ -20,28 +20,32 @@
 
       <form method="POST" action="/account/edit?_method=PUT">
 
-        <div>
+        <h1>Edit Account Details</h1>
+
+        <div class="mb-2">
           <label for="name">Name:</label>
-          <input type="text" name="name" id="name" value="<%= user.name%>" />
+          <input class="form-control" type="text" name="name" id="name" value="<%= user.name%>" />
         </div>
 
-        <div>
+        <div class="mb-2">
           <label for="email">Email:</label>
-          <input type="text" name="email" id="email" value="<%= user.email%>">
+          <input class="form-control" type="text" name="email" id="email" value="<%= user.email%>">
+        </div class="mb-2">
+
+        <div class="mb-2">
+          <label for="avatar">Avatar (url):</label>
+          <input class="form-control" type="text" name="avatar" id="avatar" value="<%= user.avatar%>">
         </div>
 
         <div>
-          <label for="avatar">Avatar (url):</label>
-          <input type="text" name="avatar" id="avatar" value="<%= user.avatar%>">
-        </div>
-
-        <div class="submit-Btn">
-          <input type="submit" value="Submit">
+          <button class="btn-show mt-2" type="submit">Submit</button>
         </div>
 
       </form>
 
     </main>
+
+    <%- include('../partials/footer.ejs') %>
 
   </body>
 
