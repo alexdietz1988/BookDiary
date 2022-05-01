@@ -24,18 +24,26 @@
                     </p>
                 </header>
                 <div class="container d-flex align-items-start ">
-                    <div class="book-display">
-                        <img class="show-book" src=<%=book.cover %> alt="<%= book.title %>">
-                            <div class="show-page-buttons container">
-                                <form class="edit-button" action="/<%= book._id %>/edit">
-                                    <button class="btn-show" type="submit"> Edit Book</button>
-                                </form>
 
-                                <form class="remove-button" action="/<%= book._id %>?_method=DELETE" method="POST">
-                                    <button class="btn-show" type="submit"> Remove Book</button>
-                                </form>
-                            </div>
+                    <div class="myfavoritediv text-center" >
+
+                    <div class="book-display mb-3">
+                        <img class="img-fluid" src=<%=book.cover %> alt="<%= book.title %>">
                     </div>
+
+                    <div class="show-page-buttons container">
+                        <form class="edit-button" action="/<%= book._id %>/edit">
+                            <button class="btn-show" type="submit"> Edit Book</button>
+                        </form>
+
+                        <form class="remove-button" action="/<%= book._id %>?_method=DELETE" method="POST">
+                            <button class="btn-show" type="submit"> Remove Book</button>
+                        </form>
+                    </div>
+
+                    </div>
+
+
 
                     <div class="book-info mt-5">
                         <p> <strong>Author:</strong>

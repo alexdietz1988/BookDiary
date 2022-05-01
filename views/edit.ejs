@@ -7,8 +7,9 @@
 
             <main>
 
-                <h1 class="edit-title">Edit Book</h1>
-                <form method="POST" action="/<%= bookId%>?_method=PUT" <input name="username" type="hidden"
+                <h1 class="new-book">Edit Book</h1>
+                <form method="POST" action="/<%= bookId%>?_method=PUT">
+                    <input name="username" type="hidden"
                     value="<%=username%>">
                     <div class="mb-2">
                         <label> Book Title: </label>
@@ -58,11 +59,9 @@
                     </div>
                     <div class="mb-2">
                         <label for="notes"> Notes: </label>
-
                         <textarea class="form-control" rows="4" id="notes" name="notes"
                             type="text"><%= book.notes%></textarea>
                     </div>
-
 
                     <input class="btn-show mt-4 mb-5" type="submit" value="Submit">
 

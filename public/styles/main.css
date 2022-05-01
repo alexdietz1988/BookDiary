@@ -55,7 +55,7 @@ main {
     /* text-align: center; */
     max-width: 75vw;
     margin: 40px auto;
-    min-height: 700px;
+    min-height: 70vh;
 
 
 }
@@ -158,11 +158,6 @@ li a .nav-item {
     font-size: 20px;
 }
 
-
-.show-book {
-    width: 300px;
-}
-
 .book-info {
     display: inline-block;
     max-width: 500px;
@@ -170,9 +165,10 @@ li a .nav-item {
     /* border: 2px solid #606C38; */
 }
 
+
 .book-display {
     display: inline-block;
-
+    width: 20vw;
 }
 
 .book-notes {
@@ -180,9 +176,9 @@ li a .nav-item {
 }
 
 .show-page-buttons {
-    padding: 10px;
     display: flex;
     justify-content: center;
+    /* width: 80% */
 }
 
 .edit-button,
@@ -304,16 +300,9 @@ textarea {
 footer {
     background: rgb(96, 108, 56, );
     background: linear-gradient(90deg, rgba(96, 108, 56, 0.8) 52%, rgba(221, 161, 94, 1) 100%);
+    height: 500px;
 }
 
 @media screen and (max-width:535px) {
-    .input-info {
-        width: 90%;
-    }
-
-    /* .footer-container {
-        width: 90%;
-    } */
-
 
 }
