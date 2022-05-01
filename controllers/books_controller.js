@@ -76,9 +76,8 @@ router.get('/new', (req, res) => {
 
 router.post('/new', async (req, res, next) => {
     try {
-        const username = req.session.currentUser.username
         await db.Book.create(req.body)
-        return res.redirect(`/${username}/home`)
+        return res.redirect('/home')
     } catch (error) {
         console.log(error)
         req.error = error
