@@ -158,11 +158,6 @@ li a .nav-item {
     font-size: 20px;
 }
 
-
-.show-book {
-    width: 80%;
-}
-
 .book-info {
     display: inline-block;
     max-width: 500px;
@@ -173,7 +168,7 @@ li a .nav-item {
 
 .book-display {
     display: inline-block;
-    width: 80%;
+    width: 20vw;
 }
 
 .book-notes {
