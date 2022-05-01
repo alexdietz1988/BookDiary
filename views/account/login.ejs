@@ -5,34 +5,52 @@
 
     <body>
 
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <div><img
+                        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.Z5y5YoDLQk7a6BhgcMdKHAHaJN%26pid%3DApi&f=1"
+                        class="navLogo"></div>
+                <a class="navbar-brand" href="/">Book Diary</a>
+        
+            </div>
+        </nav>
+
         <main>
 
-            <div class="loginHeader">
-                <h1 class="login-title">Book Diary</h1>
-                <img src="" placeholder="Book Diary logo" />
+
+            <h1>Book Diary</h1>
+
+            <div class="mb-5">
+                <h4 style="text-align:center">A diary for tracking books you've read.</h4>
             </div>
 
-            <div class="login-summary mb-5">
-                <h3>A diary for tracking books you've read.</h3>
-            </div>
+            <section class="mb-5">
+            <h3>Register for an account</h3>
+            <form class="mt-4" method="GET" action="account/register">
+                <button type="submit" class="btn-show mt4">Register</button>
+            </form>
 
+            </section>
+
+            <section class="mb-3">
+            <h3>Login</h3>
             <form method="POST" action="account/login">
-                <div>
+                <div class="mb-2">
                     <label for="username">Username</label>
                     <input class="form-control" type="text" name="username" id="username">
                 </div>
-                <div>
+                <div class="mb-2">
                     <label for="password">Password</label>
                     <input class="form-control" type="password" name="password" id="password">
                 </div>
-                <input class="btn-show mt-4" type="submit" value="Submit">
+                <button class="btn-show mt-4" type="submit">Submit</button>
             </form>
-
-            <div class="signUp">
-                <h3><a href="/account/register">Register</a></h3>
-            </div>
+            </section>
+            
 
         </main>
+
+        <%- include('../partials/footer.ejs') %>
 
     </body>
 
