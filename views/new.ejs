@@ -3,106 +3,73 @@
 <%- include('partials/head.ejs',{ pageName : "New Book" }) %>
 
 
-    <body>
-        <%- include('partials/nav.ejs') %>
-            <main>
-                <h1 class="new-book">New Book</h1>
+<body>
+<%- include('partials/nav.ejs') %>
 
-                <form class="edit-new-page" method="POST" action="/new">
-                    <table class="d-flex justify-content-center">
-                        <tr>
-                            <th>
-                                <input class="input-info" name="username" type="hidden" value="<%=username%>">
-                            </th>
-                            <th style="width:70%">
+<main>
+    <h1 class="new-book">New Book</h1>
 
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="title"> Book Title: </label>
-                            </td>
-                            <td>
-                                <input class="input-info" id="title" name="title" type="text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="author"> Author Name: </label>
-                            </td>
-                            <td>
-                                <input class="input-info" id="author" name="author" type="text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="year"> Year Published: </label>
-                            </td>
-                            <td>
-                                <input class="input-info" id="year" name="year" type="number">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="genre"> Book Genre: </label>
-                            </td>
-                            <td>
-                                <input class="input-info" id="genre" name="genre" type="text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="cover"> Book Cover Image: </label>
-                            </td>
-                            <td>
-                                <input class="input-info" id="cover" name="cover" type="text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="pages"> Pages #: </label>
-                            </td>
-                            <td>
-                                <input class="input-info" id="pages" name="pages" type="number">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="audioBook"> AudioBook Hours: </label>
-                            </td>
-                            <td>
-                                <input class="input-info" id="audioBook" name="audioBook" type="number">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label style="width: 250px" for="readingStatus"> Book Reading Status: </label>
-                            </td>
-                            <td>
-                                <select style="width: 250px" name="readingStatus" id="readingStatus">
-                                    <option value="read">I've read this book</option>
-                                    <option value="reading">I'm reading this book</option>
-                                    <option value="wanttoread">I want to read this book</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="notes"> Notes: </label>
-                            </td>
-                            <td>
-                                <textarea rows="4" style="height: 70px; width: 250px" id="notes" name="notes"
-                                    type="text">
-                                </textarea>
+    <form class="edit-new-page" method="POST" action="/new">
 
-                            </td>
-                        </tr>
-                    </table>
-                    <input class="btn-show mt-4 mb-5 px-2" class="btn-show" type="submit"
-                        value="Add a New Book to your Library">
-                </form>
-            </main>
-            <%- include('partials/footer.ejs') %>
-    </body>
+        <input class="form-control" name="username" type="hidden" value="<%=username%>">
+
+        <div class="mb-2">
+        <label for="title"> Book Title: </label>
+        <input class="form-control" id="title" name="title" type="text">
+        </div>
+
+        <div class="mb-2">
+        <label for="author"> Author Name: </label>
+        <input class="form-control" id="author" name="author" type="text">
+    </div>
+
+        <div class="mb-2">
+        <label for="year"> Year Published: </label>
+        <input class="form-control" id="year" name="year" type="number">
+    </div>
+
+        <div class="mb-2">
+        <label for="genre"> Book Genre: </label>
+        <input class="form-control" id="genre" name="genre" type="text">
+    </div>
+
+        <div class="mb-2">
+        <label for="cover"> Book Cover Image: </label>
+        <input class="form-control" id="cover" name="cover" type="text">
+    </div>
+
+        <div class="mb-2">
+        <label for="pages"> Pages #: </label>
+        <input class="form-control" id="pages" name="pages" type="number">
+    </div>
+
+        <div class="mb-2">
+        <label for="audioBook"> AudioBook Hours: </label>
+        <input class="form-control" id="audioBook" name="audioBook" type="number">
+    </div>
+
+        <div class="mb-2">
+        <label for="readingStatus"> Book Reading Status: </label>
+        <select class="form-select" name="readingStatus" id="readingStatus">
+            <option value="read">I've read this book</option>
+            <option value="reading">I'm reading this book</option>
+            <option value="wanttoread">I want to read this book</option>
+        </select>
+    </div>
+
+        <div class="mb-2">
+        <label for="notes"> Notes: </label>
+        <textarea class="form-control" rows="4" id="notes" name="notes"
+            type="text">
+        </textarea>
+        </div>
+
+        <input class="btn-show mt-4 mb-5 px-2" class="btn-show" type="submit" value="Add a New Book to My Library">
+    
+    </form>
+
+</main>
+<%- include('partials/footer.ejs') %>
+</body>
 
 </html>
