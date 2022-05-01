@@ -278,13 +278,31 @@ input {
     border-radius: 5px;
 }
 
+.cover-view {
+    transition: transform .2s;
+}
+
 .cover-view:hover {
-    color: #283618;
     background: rgb(96, 108, 56);
     background: linear-gradient(90deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 1) 100%);
     border-radius: 5px;
-    padding: 4px;
+    padding: 2px;
+    transform: scale(1.2)
 }
+
+.cover-view-home {
+    transition: transform .2s;
+}
+
+/* paddings need to be fixed */
+
+.cover-view-home:hover {
+    background: linear-gradient(70deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 1) 100%);
+    border-radius: 5px;
+    transform: scale(1.2)
+}
+
+
 
 li>a:hover {
     color: #283618;
@@ -303,6 +321,4 @@ footer {
     height: 500px;
 }
 
-@media screen and (max-width:535px) {
-
-}
+@media screen and (max-width:535px) {}

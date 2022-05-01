@@ -12,7 +12,7 @@
 
                     <div class="container d-flex mb-2">
                         <% for (let i=0; i < currentlyReading.length && i < 8; i++) { %>
-                            <div class="cover-container-home">
+                            <div class="cover-container-home cover-view-home">
                                 <a href="/<%= currentlyReading[i]._id %>"><img src=<%=currentlyReading[i].cover %> alt="
                                     <%= currentlyReading[i].title %> "
                                         class="cover-grid-home">
@@ -30,7 +30,7 @@
 
                     <div class="container d-flex mb-2">
                         <% for (let i=0; i < wantToRead.length && i < 8; i++) { %>
-                            <div class="cover-container-home">
+                            <div class="cover-container-home cover-view-home">
                                 <a href="/<%= wantToRead[i]._id %>"><img src=<%=wantToRead[i].cover %>
                                     alt="<%= read[i].title %> " class="cover-grid-home"></a>
                             </div>
@@ -46,7 +46,7 @@
 
                     <div class="container d-flex mb-2">
                         <% for (let i=0; i < read.length && i < 8; i++) { %>
-                            <div class="cover-container-home">
+                            <div class="cover-container-home cover-view-home">
                                 <a href="/<%= read[i]._id %>"><img src=<%=read[i].cover %> alt="<%= read[i].title %> "
                                         class="cover-grid-home"></a>
                             </div>
