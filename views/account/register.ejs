@@ -13,74 +13,49 @@
 
     </div>
 </nav>
-<h1>Book Diary Registration</h1>
-  <main>
 
-    <form style="display:inline-block; margin:0 auto; border: 1px solid black;"  class="edit-new-page" method="POST" action="/account/register">
+<main>
+<h1>Book Diary Registration</h1>
+
+    <form method="POST" action="/account/register">
       <div>
-        <table style="width:500px">
-          <tr>
-            <th>
-    
-            </th>
-            <th style="width:70%">
-  
-            </th>
-          </tr>
-  
-          <tr>
-            <td>
-              <label for="name">Name:</label>
-            </td>
-            <td>     
-              <input type="text" name="name" id="name" placeholder="Name">
-            </td>
-          </tr>
-    
-          <tr>
-            <td>
-              <label for="username">Username:</label>
-            </td>
-            <td>     
-              <input type="text" name="username" id="username" placeholder="Username">
-            </td>
-          </tr>
-    
-          <tr>
-            <td>
-              <label for="email">Email:</label>
-            </td>
-            <td>     
-              <input type="text" name="email" id="email" placeholder="example@domain.com">
-            </td>
-          </tr>
-    
-          <tr>
-            <td>
-              <label for="password">Password:</label>
-            </td>
-            <td>     
-              <input type="password" name="password" id="password" placeholder="********">
-            </td>
-          </tr>
-    
-          <tr>
-            <td>
-              <label for="avatar">Avatar (url):</label>
-            </td>
-            <td>     
-              <input type="text" name="avatar" id="avatar" placeholder="Image optional">
-            </td>
-          </tr>
-        </table>
+
+        <div class="mb-2">
+        <label for="name">Name<span style="color:red">*</span>:</label>
+        <input class="form-control" type="text" name="name" id="name" required>
       </div>
-      <div class="submit-Btn">
-        <input type="submit" value="Submit">
+
+      <div class="mb-2">
+        <label for="username">Username<span style="color:red">*</span>:</label>
+        <input class="form-control" type="text" name="username" id="username" required>
       </div>
+
+        <div class="mb-2">
+        <label for="email">Email<span style="color:red">*</span>:</label>
+        <input class="form-control" type="email" name="email" id="email" required>
+      </div>
+
+        <div class="mb-2">
+        <label for="password">Password<span style="color:red">*</span>:</label>
+        <input class="form-control" type="password" name="password" id="password" required>
+      </div>
+
+        <div class="mb-2">
+        <label for="avatar">Avatar (url):</label>
+        <input class="form-control" type="text" name="avatar" id="avatar" placeholder="Image optional">
+      </div>
+
+      </div>
+      <p style="color:red">* Required</p>
+      <div>
+        <button type="submit" class="btn-show mt-2">Submit</button>
+      </div>
+
       
     </form>
 
   </main>
+  <%- include('../partials/footer.ejs') %>
 
 </body>
 
