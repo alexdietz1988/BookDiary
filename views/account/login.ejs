@@ -3,7 +3,7 @@
 
 <%- include('../partials/head.ejs',{ pageName : "Login" }) %>
 
-    <body>
+    <body class="d-flex flex-column min-vh-100">
 
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
@@ -11,7 +11,7 @@
                         src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.Z5y5YoDLQk7a6BhgcMdKHAHaJN%26pid%3DApi&f=1"
                         class="navLogo"></div>
                 <a class="navbar-brand" href="/">Book Diary</a>
-        
+
             </div>
         </nav>
 
@@ -25,28 +25,28 @@
             </div>
 
             <section class="mb-5">
-            <h3>Register for an account</h3>
-            <form class="mt-4" method="GET" action="/account/register">
-                <button type="submit" class="btn-show mt4">Register</button>
-            </form>
+                <h3>Register for an account</h3>
+                <form class="mt-4" method="GET" action="/account/register">
+                    <button type="submit" class="btn-show mt4">Register</button>
+                </form>
 
             </section>
 
             <section class="mb-3">
-            <h3>Login</h3>
-            <form method="POST" action="/account/login">
-                <div class="mb-2">
-                    <label for="username">Username</label>
-                    <input class="form-control" type="text" name="username" id="username">
-                </div>
-                <div class="mb-2">
-                    <label for="password">Password</label>
-                    <input class="form-control" type="password" name="password" id="password">
-                </div>
-                <button class="btn-show mt-4" type="submit">Submit</button>
-            </form>
+                <h3>Login</h3>
+                <form method="POST" action="/account/login">
+                    <div class="mb-2">
+                        <label for="username">Username</label>
+                        <input class="form-control" type="text" name="username" id="username">
+                    </div>
+                    <div class="mb-2">
+                        <label for="password">Password</label>
+                        <input class="form-control" type="password" name="password" id="password">
+                    </div>
+                    <button class="btn-show mt-4" type="submit">Submit</button>
+                </form>
             </section>
-            
+
 
         </main>
 

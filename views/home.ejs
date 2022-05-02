@@ -2,13 +2,13 @@
 <html lang="en">
 <%- include('partials/head.ejs',{ pageName : "Home" }) %>
 
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <%- include('partials/nav.ejs') %>
 
             <main>
 
                 <section class="mb-4">
-                    <h3><a class="home-library" href='/currentlyreading'>Books I'm reading</a></h3>
+                    <h3><a class="home-library" href='/currentlyreading'>Books I'm Reading</a></h3>
 
                     <div class="container d-flex mb-2">
                         <% for (let i=0; i < currentlyReading.length && i < 8; i++) { %>
@@ -26,7 +26,7 @@
                 </section>
 
                 <section class="mb-4">
-                    <h3><a class="home-library" href='/wanttoread'>Books I want to read</a></h3>
+                    <h3><a class="home-library" href='/wanttoread'>Books I Want to Read</a></h3>
 
                     <div class="container d-flex mb-2">
                         <% for (let i=0; i < wantToRead.length && i < 8; i++) { %>
@@ -42,7 +42,7 @@
                 </section>
 
                 <section class="mb-4">
-                    <h3><a class="home-library" href='/finishedreading'>Books I've read</a></h3>
+                    <h3><a class="home-library" href='/finishedreading'>Books I've Read</a></h3>
 
                     <div class="container d-flex mb-2">
                         <% for (let i=0; i < read.length && i < 8; i++) { %>

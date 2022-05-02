@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include('../partials/head.ejs',{ pageName : "Books I want to read" }) %>
 
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <%- include('../partials/nav.ejs') %>
 
             <main>
@@ -24,7 +24,7 @@
                     <div class="flex-wrap d-flex justify-content-center mb-5">
                         <% for (let i=0; i < books.length; i++) { %>
                             <div class="cover-container">
-                                <a class="cover-view" href="/<%= books[i]._id %>"><img src=<%=books[i].cover %>
+                                <a class="cover-view " href="/<%= books[i]._id %>"><img src=<%=books[i].cover %>
                                     alt="
                                     <%= books[i].title %>" class="cover-grid">
                                 </a>
