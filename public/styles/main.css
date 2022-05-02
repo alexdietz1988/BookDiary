@@ -103,8 +103,8 @@ li a .nav-item {
 }
 
 .cover-container-home {
-    margin: 0;
-    width: 100px;
+    width: 85px;
+    margin: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -265,7 +265,7 @@ input {
 
 .cover-view-home:hover {
     background: linear-gradient(70deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 1) 100%);
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 2px;
     transform: scale(1.2)
 }
