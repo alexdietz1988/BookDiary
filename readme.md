@@ -2,18 +2,20 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About the Project</a></li>
-        <li><a href="#idea">Idea</a></li>
+    <li><a href="#heroku-deployment">Heroku Deployment</a></li>
+    <li><a href="#about-the-project">About the Project</a></li>
+    <li><a href="#idea">Idea</a></li>
     <li><a href="#team">Team</a>   </li>
-        <li><a href="#built-with">Built With </a></li>
-   <li><a href="#user-stories">User Stories</a></li>
+    <li><a href="#built-with">Built With </a></li>
+    <li><a href="#user-stories">User Stories</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#erd">ERD</a></li>
     <li><a href="#screenshots">Screenshots</a></li>
   </ol>
 </details>
 
+## Heroku Deployment
+[Heroku Deployment](https://book-diary-321.herokuapp.com)
 
 ## About the Project
 BookDiary is a website where you can keep track of books you are interested in. You can add books to your library and mark whether they are books you've read, books you're currently reading or books you want to read. You can also add your own notes about each book and edit them any time. 
