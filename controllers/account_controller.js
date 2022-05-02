@@ -60,8 +60,9 @@ router.get('/settings', (req, res) => {
 
 router.get('/edit', async (req, res, next) => {
     try {
-        const user = await User.findOne({ username: req.session.currentUser.username })
-        const context = { user }
+        const username = req.session.currentUser.username
+        const user = await User.findOne({ username: username })
+        const context = { user, username }
         res.render('account/edit.ejs', context)
     } catch (error) {
         console.log(error)

@@ -75,10 +75,6 @@ Improvements:
  - [ ] (stretch) Toggle between list view and cover view, rather than displaying both on the same page
 
  Our website is currently organized so that books belong exclusively to particular users (one-to-many relationship between users and books). A different way of organizing website would be to have books accessible to any user (many-to-many relationship between users and books), this would require an additional database model capturing user-specific information about particular books, e.g. whether a user has read a particular book. This way of organizing the website would allow a user to add and see public reviews of books and add books from the public database to their own library without having to add book details. It would also make possible other features such as book recommendations based on genre or author. 
- 
- ### Known issues
- - Animation on hover makes other elements move.
- - The footer isn't positioned correctly.
 
 ## ERD 
 ![image](https://user-images.githubusercontent.com/101350351/165376272-0debcf9e-c306-49d6-8c38-3022cb9a2e28.png)
