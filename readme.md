@@ -80,8 +80,8 @@ Improvements:
 ![image](https://user-images.githubusercontent.com/101350351/165376272-0debcf9e-c306-49d6-8c38-3022cb9a2e28.png)
 
 ## Screenshots
-!Image('screenshots/user-home.png')
-!Image('screenshots/book.png')
+![image](screenshots/user-home.png)
+![image](screenshots/book.png)
 
 
 
