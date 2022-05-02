@@ -87,14 +87,21 @@ footer {
     font-family: 'Archivo', sans-serif;
 }
 
-.submit-Btn {
-    text-align: center;
-    margin: 150px;
-}
-
 a:link {
     text-decoration: none;
 }
+
+.list-link {
+    color: #283618
+}
+
+.list-link:hover {
+    color: #283618;
+    background: rgb(96, 108, 56);
+    background: linear-gradient(90deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 1) 100%);
+    border-radius: 5px;
+}
+
 
 .navbar {
     background: rgb(96, 108, 56, );
@@ -137,6 +144,31 @@ li a .nav-item {
     border: 1px solid black;
 }
 
+.cover-view {
+    transition: transform .2s;
+    padding: 5px;
+}
+
+.cover-view:hover {
+    background: rgba(96, 108, 56, 0.5);
+    background: linear-gradient(90deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 0.5) 100%);
+    border-radius: 5px;
+    padding: 5px;
+    transform: scale(1.2);
+}
+
+.cover-view-home {
+    padding: 2px;
+    transition: transform .2s;
+}
+
+.cover-view-home:hover {
+    background: linear-gradient(70deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 1) 100%);
+    border-radius: 3px;
+    padding: 2px;
+    transform: scale(1.2)
+}
+
 .reading-status {
     display: inline-block;
     padding: 5px;
@@ -159,16 +191,6 @@ li a .nav-item {
     margin-top: 50px;
 }
 
-.show-page-buttons {
-    display: flex;
-    justify-content: center;
-}
-
-.edit-button,
-.remove-button {
-    margin: 10px;
-}
-
 .edit {
     padding: 2px 20px;
 }
@@ -185,6 +207,16 @@ li a .nav-item {
 
 .home-library:hover {
     color: #606C38
+}
+
+.show-page-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.edit-button,
+.remove-button {
+    margin: 10px;
 }
 
 .btn-more {
@@ -238,41 +270,9 @@ li a .nav-item {
     height: 30px;
     width: 30px;
     border-radius: 100%;
-
 }
 
-.list-link {
-    color: #283618
-}
-
-.list-link:hover {
-    color: #283618;
-    background: rgb(96, 108, 56);
-    background: linear-gradient(90deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 1) 100%);
-    border-radius: 5px;
-}
-
-.cover-view {
-    transition: transform .2s;
-    padding: 5px;
-}
-
-.cover-view:hover {
-    background: rgba(96, 108, 56, 0.5);
-    background: linear-gradient(90deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 0.5) 100%);
-    border-radius: 5px;
-    padding: 5px;
-    transform: scale(1.2);
-}
-
-.cover-view-home {
-    padding: 2px;
-    transition: transform .2s;
-}
-
-.cover-view-home:hover {
-    background: linear-gradient(70deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 1) 100%);
-    border-radius: 3px;
-    padding: 2px;
-    transform: scale(1.2)
+.submit-Btn {
+    text-align: center;
+    margin: 150px;
 }
