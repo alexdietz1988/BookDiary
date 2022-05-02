@@ -112,6 +112,7 @@ li a .nav-item {
     color: white;
 }
 
+
 .navLogo {
     width: 20px;
 }
@@ -285,7 +286,7 @@ input {
 
 .cover-view:hover {
     background: rgba(96, 108, 56, 0.5);
-    background: linear-gradient(90deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 1) 100%);
+    background: linear-gradient(90deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 0.5) 100%);
     border-radius: 5px;
     padding: 5px;
     transform: scale(1.2);
@@ -299,7 +300,7 @@ input {
 /* paddings need to be fixed */
 
 .cover-view-home:hover {
-    background: linear-gradient(70deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 1) 100%); 
+    background: linear-gradient(70deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 0.5) 100%); 
     border-radius: 5px;
     padding: 2px;
     transform: scale(1.2)
