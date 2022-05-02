@@ -51,9 +51,24 @@
                         <label for="readingStatus"> Book Reading Status </label>
 
                         <select class="form-select" name="readingStatus" id="readingStatus">
-                            <option value="read">I've read this book</option>
-                            <option value="reading">I'm reading this book</option>
-                            <option value="wanttoread">I want to read this book</option>
+                            <option value="read" <% if(book.readingStatus==="read" ) { %>
+                                selected
+                                <% } %>
+                                    >I've read this
+                                    book
+                            </option>
+                            <option value="reading" <% if(book.readingStatus==="reading" ) { %>
+                                selected
+                                <% } %>
+                                    >I'm reading
+                                    this book
+                            </option>
+                            <option value="wanttoread" <% if(book.readingStatus==="wanttoread" ) { %>
+                                selected
+                                <% } %>
+                                    >I want
+                                    to read this book
+                            </option>
                         </select>
                     </div>
                     <div class="mb-2">
