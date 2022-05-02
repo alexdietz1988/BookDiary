@@ -280,25 +280,28 @@ input {
 
 .cover-view {
     transition: transform .2s;
+    padding: 5px;
 }
 
 .cover-view:hover {
-    background: rgb(96, 108, 56);
+    background: rgba(96, 108, 56, 0.5);
     background: linear-gradient(90deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 1) 100%);
     border-radius: 5px;
-    padding: 0px;
-    transform: scale(1.2)
+    padding: 5px;
+    transform: scale(1.2);
 }
 
 .cover-view-home {
+    padding: 2px;
     transition: transform .2s;
 }
 
 /* paddings need to be fixed */
 
 .cover-view-home:hover {
-    /* background: linear-gradient(70deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 1) 100%); */
+    background: linear-gradient(70deg, rgba(96, 108, 56, 0.5) 20%, rgba(221, 161, 94, 1) 100%); 
     border-radius: 5px;
+    padding: 2px;
     transform: scale(1.2)
 }
 
