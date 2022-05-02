@@ -9,47 +9,46 @@
 
                 <h1 class="new-book">Edit Book</h1>
                 <form method="POST" action="/<%= bookId%>?_method=PUT">
-                    <input name="username" type="hidden"
-                    value="<%=username%>">
+                    <input name="username" type="hidden" value="<%=username%>">
                     <div class="mb-2">
-                        <label> Book Title: </label>
+                        <label> Book Title<span style="color:red">*</span> </label>
                         <input class="form-control" name="title" type="text" value="<%= book.title%>">
                     </div>
                     <div class="mb-2">
 
-                        <label> Author Name: </label>
+                        <label> Author Name<span style="color:red">*</span> </label>
                         <input class="form-control" name="author" type="text" value="<%= book.author%>">
                     </div>
 
                     <div class="mb-2">
 
-                        <label for="year"> Year Published: </label>
+                        <label for="year"> Year Published </label>
                         <input class="form-control" id="year" name="year" type="number" value="<%= book.year%>">
                     </div>
 
                     <div class="mb-2">
-                        <label for="genre"> Book Genre: </label>
+                        <label for="genre"> Book Genre </label>
                         <input class="form-control" id="genre" name="genre" type="text" value="<%= book.genre%>">
                     </div>
 
                     <div class="mb-2">
-                        <label for="cover"> Book Cover Image: </label>
+                        <label for="cover"> Book Cover Image </label>
                         <input class="form-control" id="cover" name="cover" type="text" value="<%= book.cover%>">
                     </div>
 
                     <div class="mb-2">
-                        <label for="pages"> Pages #: </label>
+                        <label for="pages"> Pages # </label>
                         <input class="form-control" id="pages" name="pages" type="number" value="<%= book.pages%>">
                     </div>
 
                     <div class="mb-2">
-                        <label for="audioBook"> AudioBook Hours: </label>
+                        <label for="audioBook"> AudioBook Hours </label>
                         <input class="form-control" id="audioBook" name="audioBook" type="number"
                             value="<%= book.audioBook%>">
                     </div>
 
                     <div class="mb-2">
-                        <label for="readingStatus"> Book Reading Status: </label>
+                        <label for="readingStatus"> Book Reading Status </label>
 
                         <select class="form-select" name="readingStatus" id="readingStatus">
                             <option value="read">I've read this book</option>
@@ -58,7 +57,7 @@
                         </select>
                     </div>
                     <div class="mb-2">
-                        <label for="notes"> Notes: </label>
+                        <label for="notes"> Notes </label>
                         <textarea class="form-control" rows="4" id="notes" name="notes"
                             type="text"><%= book.notes%></textarea>
                     </div>
