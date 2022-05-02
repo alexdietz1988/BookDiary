@@ -10,7 +10,7 @@
    <li><a href="#user-stories">User Stories</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#erd">ERD</a></li>
-    <li><a href="#website-layout">Website Layout</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
   </ol>
 </details>
 
@@ -83,9 +83,9 @@ Improvements:
 ## ERD 
 ![image](https://user-images.githubusercontent.com/101350351/165376272-0debcf9e-c306-49d6-8c38-3022cb9a2e28.png)
 
-## Website Layout
-Home 
-
+## Screenshots
+!Image('screenshots/user-home.png')
+!Image('screenshots/book.png')
 
 
 
